@@ -10,7 +10,7 @@ import { Home } from '@mui/icons-material';
 
 function Navbar() {
 	return (
-		<AppBar position='static' sx={{ backgroundColor: '#242424' }}>
+		<AppBar position='static'>
 			<Toolbar>
 				<IconButton
 					size='large'

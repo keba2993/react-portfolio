@@ -1,14 +1,14 @@
 import './App.css';
+import Experience from './components/Experience';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 
 function App() {
-	// const [value, setValue] = useState(0);
-
 	return (
 		<>
 			<Navbar />
 			<Hero />
+			<Experience />
 		</>
 	);
 }

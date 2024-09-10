@@ -18,7 +18,7 @@ function Hero() {
 					</Typography>
 				</Grid>
 				<Grid size={12}>
-					<Typography variant='body1'>
+					<Typography variant='body1' align='center'>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
 						pulvinar bibendum risus, feugiat blandit augue egestas a. Curabitur
 						sollicitudin ligula eu enim mollis, sit amet commodo eros

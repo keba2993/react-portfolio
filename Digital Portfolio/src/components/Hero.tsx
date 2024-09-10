@@ -8,7 +8,7 @@ function Hero() {
 			<Grid
 				container
 				spacing={2}
-				size={8}
+				size={{ xs: 12, sm: 12, md: 8 }}
 				direction='column'
 				sx={{ maxHeight: '100%' }}
 			>
@@ -37,7 +37,7 @@ function Hero() {
 					</Typography>
 				</Grid>
 			</Grid>
-			<Grid size='grow' sx={{ textAlign: 'center' }}>
+			<Grid size={{ xs: 12, sm: 12, md: 4 }} sx={{ textAlign: 'center' }}>
 				<Box
 					component='img'
 					className='hero-img'

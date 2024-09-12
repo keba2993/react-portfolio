@@ -14,7 +14,7 @@ function Hero() {
 			>
 				<Grid size={12}>
 					<Typography variant='h2'>
-						Kevin Barone, Fullstack Web Developer
+						Kevin Barone, Fullstack Developer
 					</Typography>
 				</Grid>
 				<Grid size={12}>

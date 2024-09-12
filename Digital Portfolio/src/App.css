@@ -12,3 +12,23 @@
 	max-height: 450px;
 	max-width: 300px;
 }
+
+.experience-dot-img {
+	height: 2.75rem;
+	width: 2.75rem;
+	border-radius: 50%;
+}
+
+.experience-card-wrapper {
+	height: auto;
+	max-height: 5rem;
+	overflow: hidden;
+	transition: max-height 0.5s linear;
+	padding: 12px 2;
+
+	&:hover {
+		border-bottom: 2px solid #1976d2;
+		box-shadow: 0 0 8px;
+		max-height: 50rem;
+	}
+}

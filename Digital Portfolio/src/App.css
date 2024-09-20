@@ -13,22 +13,32 @@
 	max-width: 300px;
 }
 
-.experience-dot-img {
-	height: 2.75rem;
-	width: 2.75rem;
+.step-logo-container {
+	background-color: blue;
+	height: 3.75rem;
+	width: 3.75rem;
 	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.experience-card-wrapper {
-	height: auto;
-	max-height: 5rem;
-	overflow: hidden;
-	transition: max-height 0.5s linear;
-	padding: 12px 2;
+.step-logo {
+	height: 4rem;
+	width: 4rem;
+	border-radius: 50%;
 
 	&:hover {
-		border-bottom: 2px solid #1976d2;
-		box-shadow: 0 0 8px;
-		max-height: 50rem;
+		opacity: 50%;
 	}
+}
+
+.step-logo-active,
+.step-content-active {
+	border: 3px solid black;
+}
+
+.step-content {
+	text-align: left;
+	width: 200px;
 }

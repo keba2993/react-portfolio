@@ -1,5 +1,5 @@
 import './App.css';
-import Experience from './components/Experience';
+import ExperienceTimeline from './components/ExperienceTimeline';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 
@@ -8,7 +8,7 @@ function App() {
 		<>
 			<Navbar />
 			<Hero />
-			<Experience />
+			<ExperienceTimeline />
 		</>
 	);
 }

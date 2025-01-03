@@ -14,7 +14,7 @@
 }
 
 .step-logo-container {
-	background-color: blue;
+	background-color: whitesmoke;
 	height: 3.75rem;
 	width: 3.75rem;
 	border-radius: 50%;
@@ -29,7 +29,7 @@
 	border-radius: 50%;
 
 	&:hover {
-		opacity: 50%;
+		opacity: 70%;
 	}
 }
 
@@ -41,4 +41,15 @@
 .step-content {
 	text-align: left;
 	width: 200px;
+}
+
+.timeline-connector {
+	height: 1.5rem;
+}
+
+.timeline-content {
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
+	justify-content: center;
 }

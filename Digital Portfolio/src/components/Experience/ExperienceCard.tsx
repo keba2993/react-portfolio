@@ -10,7 +10,7 @@ import {
 	Box,
 	Grid2,
 } from '@mui/material';
-import nasdaqLogo from '../assets/nasdaq.svg';
+import nasdaqLogo from '../../assets/nasdaq.svg';
 
 function ExperienceCard() {
 	return (

@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material';
-import capturedSunLogo from '../assets/captured-sun.svg';
-import willowtreeLogo from '../assets/WillowTree-logo.svg';
-import nasdaqLogo from '../assets/nasdaq.svg';
+import capturedSunLogo from '../../assets/captured-sun.svg';
+import willowtreeLogo from '../../assets/WillowTree-logo.svg';
+import nasdaqLogo from '../../assets/nasdaq.svg';
 import { useState } from 'react';
 import {
 	Timeline,

@@ -59,3 +59,14 @@
 	padding: 2rem;
 	justify-content: center;
 }
+
+.skill-card {
+	background-color: whitesmoke;
+	border-radius: 100px;
+	padding: 1rem;
+	margin: 1rem;
+	width: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

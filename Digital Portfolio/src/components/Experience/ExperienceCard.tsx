@@ -10,16 +10,16 @@ import {
 	Box,
 	Grid2,
 } from '@mui/material';
-import nasdaqLogo from '../../assets/nasdaq.svg';
 import { motion, AnimatePresence } from 'motion/react';
 import { useStore } from '../../store';
+import { experienceData } from '../../data';
 
 function ExperienceCard() {
 	const { isActive } = useStore();
 
 	return (
 		<AnimatePresence mode='popLayout'>
-			{isActive && (
+			{isActive != -1 && (
 				<motion.div
 					layout
 					initial={{ opacity: 0 }}
@@ -33,18 +33,20 @@ function ExperienceCard() {
 									component='img'
 									alt='Company Logo'
 									height='80'
-									image={nasdaqLogo}
+									image={experienceData[isActive].imagePath}
 									title='Company Logo'
 									style={{ marginRight: '16px', width: '80px' }}
 								/>
 								<Grid2 container spacing={1}>
 									<Grid2 size={12}>
 										<Typography variant='h4'>
-											Associate Software Engineer, Full Stack
+											{experienceData[isActive].jobTitle}
 										</Typography>
 									</Grid2>
 									<Grid2 size={2}>
-										<Typography variant='h5'>CoBank</Typography>
+										<Typography variant='h5'>
+											{experienceData[isActive].companyName}
+										</Typography>
 									</Grid2>
 									<Grid2 size={4} display='flex' alignItems='center'>
 										<Typography variant='body1'>Nov 2024 - Present</Typography>

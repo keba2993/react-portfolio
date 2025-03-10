@@ -1,11 +1,12 @@
 import { create } from 'zustand';
 
 interface StoreState {
-	isActive: boolean;
-	setIsActive: () => void;
+	isActive: number;
+	setIsActive: (num: number) => void;
 }
 
 export const useStore = create<StoreState>((set) => ({
-	isActive: true,
-	setIsActive: () => set((state) => ({ isActive: !state.isActive })),
+	isActive: -1,
+	setIsActive: (num: number) =>
+		set((state) => ({ isActive: state.isActive == num ? -1 : num })),
 }));

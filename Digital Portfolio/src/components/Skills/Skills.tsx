@@ -22,7 +22,15 @@ function Skills() {
 		>
 			{skillList.map((skill) => {
 				return (
-					<Card key={skill} className='skill-card'>
+					<Card
+						key={skill}
+						className='card'
+						sx={{
+							boxShadow:
+								'0.5em 0.5em 0.5em green, -0.5em -0.5em 0.4em rgb(0, 255, 0, 0.5)',
+							borderRadius: '5%',
+						}}
+					>
 						<CardContent>{skill}</CardContent>
 					</Card>
 				);

@@ -60,7 +60,7 @@ function ExperienceTimeline() {
 							</TimelineSeparator>
 							<TimelineContent className='timeline-content'>
 								<Typography variant='h6' component='span'>
-									{item.companyName} {index}
+									{item.companyName}
 								</Typography>
 								<Typography>{item.jobTitle}</Typography>
 							</TimelineContent>

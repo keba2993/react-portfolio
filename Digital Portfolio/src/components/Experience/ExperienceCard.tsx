@@ -26,7 +26,10 @@ function ExperienceCard() {
 					animate={{ opacity: 1 }}
 					exit={{ opacity: 0 }}
 				>
-					<Card>
+					<Card
+						className='card'
+						sx={{ maxWidth: '50rem', margin: 'auto', height: '100%' }}
+					>
 						<CardContent>
 							<Box display='flex' alignItems='center'>
 								<CardMedia
@@ -35,7 +38,11 @@ function ExperienceCard() {
 									height='80'
 									image={experienceData[isActive].imagePath}
 									title='Company Logo'
-									style={{ marginRight: '16px', width: '80px' }}
+									style={{
+										marginRight: '20px',
+										width: '80px',
+										borderRadius: '20%',
+									}}
 								/>
 								<Grid2 container spacing={1}>
 									<Grid2 size={12}>
@@ -43,26 +50,34 @@ function ExperienceCard() {
 											{experienceData[isActive].jobTitle}
 										</Typography>
 									</Grid2>
-									<Grid2 size={2}>
+									<Grid2 size={6}>
 										<Typography variant='h5'>
 											{experienceData[isActive].companyName}
 										</Typography>
 									</Grid2>
-									<Grid2 size={4} display='flex' alignItems='center'>
-										<Typography variant='body1'>Nov 2024 - Present</Typography>
+									<Grid2
+										size={6}
+										display='flex'
+										alignItems='center'
+										justifyContent={'flex-end'}
+									>
+										<Typography variant='body1'>
+											{experienceData[isActive].startDate} -{' '}
+											{experienceData[isActive].endDate}
+										</Typography>
 									</Grid2>
 								</Grid2>
 							</Box>
 							<List>
-								<ListItem>
-									<ListItemText primary='Developed and maintained web applications using React and Node.js.' />
-								</ListItem>
-								<ListItem>
-									<ListItemText primary='Collaborated with cross-functional teams to define, design, and ship new features.' />
-								</ListItem>
-								<ListItem>
-									<ListItemText primary='Implemented RESTful APIs and integrated third-party services.' />
-								</ListItem>
+								{experienceData[isActive].responsibilities.map(
+									(item, index) => {
+										return (
+											<ListItem key={index}>
+												<ListItemText primary={item} />
+											</ListItem>
+										);
+									}
+								)}
 							</List>
 						</CardContent>
 						<CardActions></CardActions>

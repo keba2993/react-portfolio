@@ -60,12 +60,11 @@
 	justify-content: center;
 }
 
-.skill-card {
+.card {
 	background-color: whitesmoke;
-	border-radius: 100px;
 	padding: 1rem;
 	margin: 1rem;
-	width: 200px;
+	min-width: 10rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;

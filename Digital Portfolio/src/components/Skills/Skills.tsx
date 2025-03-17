@@ -1,6 +1,9 @@
+import { useTheme } from '@mui/material';
 import { CardContent, Card } from '@mui/material';
 
 function Skills() {
+	const theme = useTheme();
+
 	let skillList = [
 		'C++',
 		'Java',
@@ -26,8 +29,7 @@ function Skills() {
 						key={skill}
 						className='card'
 						sx={{
-							boxShadow:
-								'0.5em 0.5em 0.5em green, -0.5em -0.5em 0.4em rgb(0, 255, 0, 0.5)',
+							boxShadow: `0.5em 0.5em 0.5em ${theme.palette.primary.main}, -0.5em -0.5em 0.4em ${theme.palette.secondary.main}`,
 							borderRadius: '5%',
 						}}
 					>

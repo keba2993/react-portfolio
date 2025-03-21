@@ -1,5 +1,6 @@
 import { useTheme } from '@mui/material';
 import { CardContent, Card } from '@mui/material';
+import { motion } from 'motion/react';
 
 function Skills() {
 	const theme = useTheme();
@@ -25,16 +26,22 @@ function Skills() {
 		>
 			{skillList.map((skill) => {
 				return (
-					<Card
-						key={skill}
-						className='card'
-						sx={{
-							boxShadow: `0.5em 0.5em 0.5em ${theme.palette.primary.main}, -0.5em -0.5em 0.4em ${theme.palette.secondary.main}`,
-							borderRadius: '5%',
-						}}
+					<motion.div
+						whileHover={{ scale: 1.1, rotate: -5 }}
+						whileInView={{ opacity: 1, transition: { duration: 0.75 } }}
+						initial={{ opacity: 0 }}
 					>
-						<CardContent>{skill}</CardContent>
-					</Card>
+						<Card
+							key={skill}
+							className='card'
+							sx={{
+								boxShadow: `0.5em 0.5em 0.5em ${theme.palette.primary.main}, -0.5em -0.5em 0.4em ${theme.palette.secondary.main}`,
+								borderRadius: '5%',
+							}}
+						>
+							<CardContent>{skill}</CardContent>
+						</Card>
+					</motion.div>
 				);
 			})}
 		</div>

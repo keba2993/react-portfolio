@@ -1,4 +1,4 @@
-import { useTheme } from '@mui/material';
+import { Typography, useTheme } from '@mui/material';
 import { CardContent, Card } from '@mui/material';
 import { motion } from 'motion/react';
 
@@ -39,7 +39,11 @@ function Skills() {
 								borderRadius: '5%',
 							}}
 						>
-							<CardContent>{skill}</CardContent>
+							<CardContent>
+								<Typography variant='body1' sx={{ fontSize: '1.2rem' }}>
+									{skill}
+								</Typography>
+							</CardContent>
 						</Card>
 					</motion.div>
 				);

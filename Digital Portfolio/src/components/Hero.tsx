@@ -5,7 +5,11 @@ import Grid from '@mui/material/Grid2';
 
 function Hero() {
 	return (
-		<Grid container spacing={2} className='hero-container'>
+		<Grid
+			container
+			spacing={4}
+			className='mx-auto max-w-screen-xl px-6 md:px-12 lg:px-24 lg:py-6'
+		>
 			<Grid
 				container
 				spacing={2}
@@ -16,23 +20,25 @@ function Hero() {
 				<Grid size={4}>
 					<Typography variant='h2'>Kevin Barone</Typography>
 					<Typography variant='h5'>Fullstack Software Engineer</Typography>
+
 					<IconButton
 						size='large'
-						edge='start'
 						color='inherit'
 						aria-label='nav-github'
 						href='https://github.com/keba2993'
+						className='scale-125'
 					>
-						<GitHub className='hero-icon' />
+						<GitHub />
 					</IconButton>
 					<IconButton
 						size='large'
-						edge='start'
+						edge='end'
 						color='inherit'
 						aria-label='nav-linkedin'
 						href='https://www.linkedin.com/in/kbarone18/'
+						className='scale-125'
 					>
-						<LinkedIn className='hero-icon' />
+						<LinkedIn />
 					</IconButton>
 				</Grid>
 				<Grid size={8}>

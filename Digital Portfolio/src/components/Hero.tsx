@@ -18,22 +18,28 @@ function Hero() {
 					</Typography>
 				</Grid>
 				<Grid size={12}>
-					<Typography variant='body1' align='center'>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-						pulvinar bibendum risus, feugiat blandit augue egestas a. Curabitur
-						sollicitudin ligula eu enim mollis, sit amet commodo eros
-						sollicitudin. Nam at egestas sem, a lobortis est. Pellentesque
-						convallis massa lectus, a pellentesque arcu feugiat sed. Suspendisse
-						eu blandit orci. Lorem ipsum dolor sit amet, consectetur adipiscing
-						elit. Nulla viverra eros mauris, eget hendrerit risus sodales vitae.
-						Nullam auctor, purus eget eleifend mattis, mi enim placerat arcu,
-						sit amet ornare dui orci lacinia ex. In venenatis eros diam, a
-						gravida libero maximus et. Aliquam elementum vitae massa at laoreet.
-						In sollicitudin pellentesque est vel varius. Vestibulum gravida
-						lorem nulla, vel gravida nulla tristique id. Quisque lacinia semper
-						ante vitae accumsan. Donec scelerisque, metus quis scelerisque
-						blandit, velit ligula vestibulum dolor, a tincidunt enim massa at
-						quam.
+					<Typography variant='body1' align='justify'>
+						I am a fullstack developer with a passion for building robust web
+						applications and empowering software teams to develop impactful
+						products. I have experience working with a variety of technologies
+						including React, Node.js, TypeScript, and Java. I am always looking
+						for new opportunities to learn and grow as a developer by working on
+						challenging projects. <br />
+						<br />
+						Growing up, I first discoverd my interest in programming while
+						watching my father work as a software engineer. I was finally able
+						to take my first Computer Basics cours in 6th grade. I quickly fell
+						in love with technology and always wanted to find new ways be
+						creative with technoligical platforms.
+						<br />
+						<br />
+						Through internships I gained experience in a diverse range of
+						development environments, including full-stack web development,
+						mobile development, and test engineering. I continue to push myself
+						beyond my limits, learning new technologies and frameworks to expand
+						my skillset. Taking ownership of my work and being a team leader has
+						always been a priority for me as I continue to grow my career in
+						software development.
 					</Typography>
 				</Grid>
 			</Grid>

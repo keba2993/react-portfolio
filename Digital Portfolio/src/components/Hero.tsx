@@ -1,6 +1,7 @@
-import { Typography, Box } from '@mui/material';
+import { Typography, IconButton } from '@mui/material';
+import { GitHub, LinkedIn } from '@mui/icons-material';
 import Grid from '@mui/material/Grid2';
-import portraitImg from '../assets/portrait-nasdaq.jpg';
+// import portraitImg from '../assets/portrait-nasdaq.jpg';
 
 function Hero() {
 	return (
@@ -8,16 +9,33 @@ function Hero() {
 			<Grid
 				container
 				spacing={2}
-				size={{ xs: 12, sm: 12, md: 8 }}
-				direction='column'
+				size={{ xs: 12, sm: 12, md: 12 }}
+				direction='row'
 				sx={{ maxHeight: '100%' }}
 			>
-				<Grid size={12}>
-					<Typography variant='h2'>
-						Kevin Barone, Fullstack Developer
-					</Typography>
+				<Grid size={4}>
+					<Typography variant='h2'>Kevin Barone</Typography>
+					<Typography variant='h5'>Fullstack Software Engineer</Typography>
+					<IconButton
+						size='large'
+						edge='start'
+						color='inherit'
+						aria-label='nav-github'
+						href='https://github.com/keba2993'
+					>
+						<GitHub className='hero-icon' />
+					</IconButton>
+					<IconButton
+						size='large'
+						edge='start'
+						color='inherit'
+						aria-label='nav-linkedin'
+						href='https://www.linkedin.com/in/kbarone18/'
+					>
+						<LinkedIn className='hero-icon' />
+					</IconButton>
 				</Grid>
-				<Grid size={12}>
+				<Grid size={8}>
 					<Typography variant='body1' align='justify'>
 						I am a fullstack developer with a passion for building robust web
 						applications and empowering software teams to develop impactful
@@ -43,14 +61,14 @@ function Hero() {
 					</Typography>
 				</Grid>
 			</Grid>
-			<Grid size={{ xs: 12, sm: 12, md: 4 }} sx={{ textAlign: 'center' }}>
+			{/* <Grid size={{ xs: 12, sm: 12, md: 4 }} sx={{ textAlign: 'center' }}>
 				<Box
 					component='img'
 					className='hero-img'
 					alt='Kevin Barone Portrait Image'
 					src={portraitImg}
 				/>
-			</Grid>
+			</Grid> */}
 		</Grid>
 	);
 }

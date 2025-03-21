@@ -3,7 +3,7 @@ import { ExperienceDataType } from './types/experienceData';
 
 export const experienceData: ExperienceDataType[] = [
 	{
-		imagePath: '/src/assets/cobank.svg',
+		imagePath: '/cobank.svg',
 		jobTitle: 'Associtate Software Engineer, Full Stack',
 		companyName: 'CoBank, ACB',
 		startDate: 'Nov 2024',
@@ -16,7 +16,7 @@ export const experienceData: ExperienceDataType[] = [
 		color: '#FF5733',
 	},
 	{
-		imagePath: '/src/assets/captured-sun.svg',
+		imagePath: '/captured-sun.svg',
 		jobTitle: 'Capstone Project Manager',
 		companyName: 'Captured Sun',
 		startDate: 'Sep 2023',
@@ -29,7 +29,7 @@ export const experienceData: ExperienceDataType[] = [
 		color: '#FF5733',
 	},
 	{
-		imagePath: '/src/assets/nasdaq.svg',
+		imagePath: '/nasdaq.svg',
 		jobTitle: 'Software Engineer Intern',
 		companyName: 'Nasdaq Inc.',
 		startDate: 'Jun 2023',
@@ -42,7 +42,7 @@ export const experienceData: ExperienceDataType[] = [
 		color: '#FF5733',
 	},
 	{
-		imagePath: '/src/assets/WillowTree-logo.svg',
+		imagePath: '/willowtree.svg',
 		jobTitle: 'Software Test Engineer Intern',
 		companyName: 'WillowTree Apps',
 		startDate: 'Jun 2022',

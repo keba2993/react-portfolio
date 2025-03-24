@@ -23,8 +23,8 @@ function App() {
 				<CssBaseline />
 				<Navbar />
 				<Hero />
-				<Experience />
-				<Skills />
+				{/* <Experience />
+				<Skills /> */}
 			</ThemeProvider>
 		</>
 	);

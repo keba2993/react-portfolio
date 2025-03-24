@@ -14,7 +14,9 @@ function Hero() {
 					padding: '1rem 1rem 0 1rem',
 				}}
 			>
-				<Typography variant='h2'>Kevin Barone</Typography>
+				<Typography variant='h2' fontWeight={400}>
+					Kevin Barone
+				</Typography>
 				<Typography variant='h5'>Fullstack Software Engineer</Typography>
 				<Container
 					sx={{
@@ -28,9 +30,9 @@ function Hero() {
 						color='inherit'
 						aria-label='nav-github'
 						href='https://github.com/keba2993'
-						className='scale-125'
+						sx={{ padding: '0px 0.25em' }}
 					>
-						<GitHub />
+						<GitHub sx={{ fontSize: 40 }} />
 					</IconButton>
 					<IconButton
 						size='large'
@@ -38,9 +40,9 @@ function Hero() {
 						color='inherit'
 						aria-label='nav-linkedin'
 						href='https://www.linkedin.com/in/kbarone18/'
-						className='scale-125'
+						sx={{ padding: '0 0.25em' }}
 					>
-						<LinkedIn />
+						<LinkedIn sx={{ fontSize: 40 }} />
 					</IconButton>
 				</Container>
 			</Grid>

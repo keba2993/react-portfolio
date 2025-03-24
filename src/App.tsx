@@ -1,9 +1,8 @@
-import './App.css';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import Experience from './components/Experience/Experience';
 import Skills from './components/Skills/Skills';
-import { ThemeProvider, createTheme } from '@mui/material';
+import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 
 const theme = createTheme({
 	palette: {
@@ -21,6 +20,7 @@ function App() {
 	return (
 		<>
 			<ThemeProvider theme={theme}>
+				<CssBaseline />
 				<Navbar />
 				<Hero />
 				<Experience />

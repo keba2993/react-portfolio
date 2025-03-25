@@ -43,7 +43,7 @@ function Navbar() {
 				<IconButton
 					size='large'
 					edge='start'
-					color='inherit'
+					color='primary'
 					aria-label='nav-home'
 				>
 					<Home />

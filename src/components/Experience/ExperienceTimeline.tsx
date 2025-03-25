@@ -18,15 +18,17 @@ function ExperienceTimeline() {
 
 	const LogoStepIcon = ({ img, num }: { img: string; num: number }) => {
 		return (
-			<Box component='div' className='step-logo-container'>
-				<Box
-					component='img'
-					className={`step-logo`}
-					alt={img}
-					src={img}
-					onClick={() => setIsActive(num)}
-				/>
-			</Box>
+			<Box
+				component='img'
+				alt={img}
+				src={img}
+				onClick={() => setIsActive(num)}
+				sx={{
+					width: '50px',
+					height: '50px',
+					borderRadius: '50%',
+				}}
+			/>
 		);
 	};
 
@@ -44,7 +46,7 @@ function ExperienceTimeline() {
 					return (
 						<TimelineItem key={index}>
 							<TimelineOppositeContent
-								sx={{ m: 'auto 0' }}
+								sx={{ m: 'auto 0', minWidth: '5rem' }}
 								align='right'
 								variant='body2'
 								color='text.secondary'
@@ -52,13 +54,13 @@ function ExperienceTimeline() {
 								{item.startDate} - {item.endDate}
 							</TimelineOppositeContent>
 							<TimelineSeparator>
-								<TimelineConnector className='timeline-connector' />
+								<TimelineConnector />
 								<TimelineDot color='secondary'>
 									<LogoStepIcon img={item.imagePath} num={index} />
 								</TimelineDot>
-								<TimelineConnector className='timeline-connector' />
+								<TimelineConnector />
 							</TimelineSeparator>
-							<TimelineContent className='timeline-content'>
+							<TimelineContent>
 								<Typography variant='h6' component='span'>
 									{item.companyName}
 								</Typography>

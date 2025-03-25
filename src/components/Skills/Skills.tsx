@@ -33,10 +33,10 @@ function Skills() {
 					>
 						<Card
 							key={skill}
-							className='card'
 							sx={{
-								boxShadow: `0.5em 0.5em 0.5em ${theme.palette.primary.main}, -0.5em -0.5em 0.4em ${theme.palette.secondary.main}`,
+								boxShadow: `0.25em 0.25em 0.25em ${theme.palette.primary.main}, -0.25em -0.25em 0.25em ${theme.palette.secondary.main}`,
 								borderRadius: '5%',
+								margin: '0.5rem',
 							}}
 						>
 							<CardContent>

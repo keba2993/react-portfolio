@@ -17,12 +17,16 @@ function Skills() {
 		'HTML',
 		'CSS',
 		'Redux',
-		'Tailwind CSS',
 		'MaterialUI',
 	];
 	return (
 		<div
-			style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}
+			style={{
+				display: 'flex',
+				justifyContent: 'center',
+				flexWrap: 'wrap',
+				maxWidth: '100%',
+			}}
 		>
 			{skillList.map((skill) => {
 				return (
@@ -37,6 +41,10 @@ function Skills() {
 								boxShadow: `0.25em 0.25em 0.25em ${theme.palette.primary.main}, -0.25em -0.25em 0.25em ${theme.palette.secondary.main}`,
 								borderRadius: '5%',
 								margin: '0.5rem',
+								minWidth: '8rem',
+								display: 'flex',
+								justifyContent: 'center',
+								alignItems: 'center',
 							}}
 						>
 							<CardContent>

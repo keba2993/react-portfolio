@@ -8,7 +8,6 @@ import {
 	TimelineOppositeContent,
 	TimelineSeparator,
 } from '@mui/lab';
-import { timelineOppositeContentClasses } from '@mui/lab/TimelineOppositeContent';
 import { motion } from 'motion/react';
 import { useStore } from '../../store';
 import { experienceData } from '../../data';
@@ -36,9 +35,6 @@ function ExperienceTimeline() {
 		<motion.div layout>
 			<Timeline
 				sx={{
-					[`& .${timelineOppositeContentClasses.root}`]: {
-						flex: 0.2,
-					},
 					maxWidth: '50rem',
 				}}
 			>
@@ -54,11 +50,11 @@ function ExperienceTimeline() {
 								{item.startDate} - {item.endDate}
 							</TimelineOppositeContent>
 							<TimelineSeparator>
-								<TimelineConnector />
+								<TimelineConnector sx={{ height: '1rem' }} />
 								<TimelineDot color='secondary'>
 									<LogoStepIcon img={item.imagePath} num={index} />
 								</TimelineDot>
-								<TimelineConnector />
+								<TimelineConnector sx={{ height: '1rem' }} />
 							</TimelineSeparator>
 							<TimelineContent>
 								<Typography variant='h6' component='span'>

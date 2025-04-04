@@ -18,6 +18,7 @@ function Skills() {
 		'HTML',
 		'CSS',
 		'Redux',
+		'Playwright',
 		'MaterialUI',
 	];
 	return (

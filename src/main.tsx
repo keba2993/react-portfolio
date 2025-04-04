@@ -21,6 +21,17 @@ const theme = createTheme({
 			secondary: '#e2e2e2',
 		},
 	},
+	components: {
+		MuiCardContent: {
+			styleOverrides: {
+				root: {
+					'&:last-child': {
+						paddingBottom: '16px',
+					},
+				},
+			},
+		},
+	},
 });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

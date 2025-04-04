@@ -14,6 +14,7 @@ function Skills() {
 		'React',
 		'Node.js',
 		'MySQL',
+		'Git',
 		'HTML',
 		'CSS',
 		'Redux',

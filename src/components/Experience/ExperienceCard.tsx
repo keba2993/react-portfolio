@@ -1,60 +1,69 @@
 import {
 	Card,
 	CardContent,
-	CardActions,
 	Typography,
 	List,
 	ListItem,
 	ListItemText,
 	CardMedia,
 	Box,
-	Grid2,
 } from '@mui/material';
 import { experienceData } from '../../data';
 
 function ExperienceCard({ expNum }: { expNum: number }) {
+	// 	const CardImage = styled('img')(({ theme }) => ({
+	// 		[theme.breakpoints.down('sm')]: {
+	// 			width: '80px',
+	// 		},
+	// 		[theme.breakpoints.up('sm')]: {
+	// 			width: '80px',
+	// 			height: '80px',
+	// 		},
+	// 	}));
+
 	return (
 		<Card
-			className='card'
-			sx={{ maxWidth: '50rem', margin: '1rem', height: '100%' }}
+			sx={{
+				maxWidth: '50rem',
+				margin: '0.5rem',
+				height: '100%',
+				boxShadow: '0 0.25em 0.5em 0.5em rgba(0, 0, 0, 0.2)',
+			}}
 		>
 			<CardContent>
-				<Box display='flex' alignItems='center'>
+				<Box
+					display={'flex'}
+					alignItems={'center'}
+					justifyContent={'space-between'}
+				>
 					<CardMedia
 						component='img'
-						alt='Company Logo'
-						height='80'
+						alt={`${experienceData[expNum].companyName} logo`}
 						image={experienceData[expNum].imagePath}
-						title='Company Logo'
+						title={`${experienceData[expNum].companyName} logo`}
 						style={{
-							marginRight: '20px',
-							width: '80px',
+							height: '60px',
+							width: '60px',
+							margin: '1rem',
 							borderRadius: '20%',
 						}}
 					/>
-					<Grid2 container spacing={1}>
-						<Grid2 size={12}>
-							<Typography variant='h4'>
-								{experienceData[expNum].jobTitle}
-							</Typography>
-						</Grid2>
-						<Grid2 size={6}>
-							<Typography variant='h5'>
-								{experienceData[expNum].companyName}
-							</Typography>
-						</Grid2>
-						<Grid2
-							size={6}
-							display='flex'
-							alignItems='center'
-							justifyContent={'flex-end'}
+					<Box>
+						<Typography variant='h5'>
+							{experienceData[expNum].jobTitle}
+						</Typography>
+						<Typography variant='h6' color='primary.main'>
+							{experienceData[expNum].companyName}
+						</Typography>
+						<Typography
+							variant='body2'
+							color='secondary.main'
+							sx={{ opacity: 0.8 }}
 						>
-							<Typography variant='body1'>
-								{experienceData[expNum].startDate} -{' '}
-								{experienceData[expNum].endDate}
-							</Typography>
-						</Grid2>
-					</Grid2>
+							{experienceData[expNum].startDate} -{' '}
+							{experienceData[expNum].endDate}
+						</Typography>
+					</Box>
 				</Box>
 				<List>
 					{experienceData[expNum].responsibilities.map((item, index) => {
@@ -66,7 +75,6 @@ function ExperienceCard({ expNum }: { expNum: number }) {
 					})}
 				</List>
 			</CardContent>
-			<CardActions></CardActions>
 		</Card>
 	);
 }

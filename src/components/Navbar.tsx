@@ -45,6 +45,9 @@ function Navbar() {
 					edge='start'
 					color='primary'
 					aria-label='nav-home'
+					onClick={() => {
+						window.location.href = '/';
+					}}
 				>
 					<Home />
 				</IconButton>
@@ -53,7 +56,12 @@ function Navbar() {
 				</Typography>
 				{width > 600 ? (
 					<Stack direction='row' spacing={1}>
-						<Button color='inherit'>Projects</Button>
+						<Button
+							color='inherit'
+							onClick={() => (window.location.href = '/projects')}
+						>
+							Projects
+						</Button>
 						<Button color='inherit'>Resume</Button>
 						<Button color='inherit'>Contact Me</Button>
 					</Stack>

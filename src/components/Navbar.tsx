@@ -1,23 +1,11 @@
-import {
-	AppBar,
-	Toolbar,
-	IconButton,
-	Typography,
-	Stack,
-	Button,
-	Drawer,
-	List,
-	ListItem,
-	ListItemButton,
-	ListItemText,
-	ListItemIcon,
-} from '@mui/material';
-import { Home, Menu, Code, Description, Email } from '@mui/icons-material';
-import { useStore } from '../store';
+import { AppBar, Toolbar, IconButton, Typography } from '@mui/material';
+import { Home, Code, Description, Email } from '@mui/icons-material';
+
 import useWindowDimensions from '../hooks/useWindowDimensions';
+import NavDrawer from './NavDrawer';
+import NavStack from './NavStack';
 
 function Navbar() {
-	const { drawerOpen, setDrawerOpen } = useStore();
 	const { width } = useWindowDimensions();
 
 	const pages = [
@@ -43,47 +31,7 @@ function Navbar() {
 				<Typography component='div' sx={{ flexGrow: 1 }}>
 					Kevin Barone
 				</Typography>
-				{width > 600 ? (
-					<Stack direction='row' spacing={1}>
-						{pages.map((page, index) => (
-							<Button
-								key={index}
-								color='inherit'
-								onClick={() =>
-									(window.location.href = `/${page.name
-										.toLowerCase()
-										.replace(/\s+/g, '-')}`)
-								}
-							>
-								{page.name}
-							</Button>
-						))}
-					</Stack>
-				) : (
-					<div>
-						<Button onClick={setDrawerOpen} color='inherit'>
-							<Menu />
-						</Button>
-						<Drawer open={drawerOpen} onClose={setDrawerOpen}>
-							<List>
-								{pages.map((page, index) => (
-									<ListItem key={index} disablePadding>
-										<ListItemButton
-											onClick={() =>
-												(window.location.href = `/${page.name
-													.toLowerCase()
-													.replace(/\s+/g, '-')}`)
-											}
-										>
-											<ListItemIcon>{page.icon}</ListItemIcon>
-											<ListItemText primary={page.name} />
-										</ListItemButton>
-									</ListItem>
-								))}
-							</List>
-						</Drawer>
-					</div>
-				)}
+				{width > 600 ? <NavStack pages={pages} /> : <NavDrawer pages={pages} />}
 			</Toolbar>
 		</AppBar>
 	);

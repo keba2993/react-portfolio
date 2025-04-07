@@ -13,29 +13,18 @@ import {
 	ListItemIcon,
 } from '@mui/material';
 import { Home, Menu, Code, Description, Email } from '@mui/icons-material';
-import { useState } from 'react';
+import { useStore } from '../store';
 import useWindowDimensions from '../hooks/useWindowDimensions';
 
 function Navbar() {
-	const [drawerOpen, setDrawerOpen] = useState(false);
+	const { drawerOpen, setDrawerOpen } = useStore();
 	const { width } = useWindowDimensions();
 
-	const toggleDrawer = () => {
-		setDrawerOpen((prevOpen: boolean) => !prevOpen);
-	};
-
-	const getIcon = (index: number) => {
-		switch (index) {
-			case 0:
-				return <Code />;
-			case 1:
-				return <Description />;
-			case 2:
-				return <Email />;
-			default:
-				return <Home />;
-		}
-	};
+	const pages = [
+		{ name: 'Projects', icon: <Code /> },
+		{ name: 'Resume', icon: <Description /> },
+		{ name: 'Contact Me', icon: <Email /> },
+	];
 
 	return (
 		<AppBar position='static'>
@@ -56,27 +45,38 @@ function Navbar() {
 				</Typography>
 				{width > 600 ? (
 					<Stack direction='row' spacing={1}>
-						<Button
-							color='inherit'
-							onClick={() => (window.location.href = '/projects')}
-						>
-							Projects
-						</Button>
-						<Button color='inherit'>Resume</Button>
-						<Button color='inherit'>Contact Me</Button>
+						{pages.map((page, index) => (
+							<Button
+								key={index}
+								color='inherit'
+								onClick={() =>
+									(window.location.href = `/${page.name
+										.toLowerCase()
+										.replace(/\s+/g, '-')}`)
+								}
+							>
+								{page.name}
+							</Button>
+						))}
 					</Stack>
 				) : (
 					<div>
-						<Button onClick={toggleDrawer} color='inherit'>
+						<Button onClick={setDrawerOpen} color='inherit'>
 							<Menu />
 						</Button>
-						<Drawer open={drawerOpen} onClose={toggleDrawer}>
+						<Drawer open={drawerOpen} onClose={setDrawerOpen}>
 							<List>
-								{['Projects', 'Resume', 'Contact Me'].map((text, index) => (
-									<ListItem key={text} disablePadding>
-										<ListItemButton>
-											<ListItemIcon>{getIcon(index)}</ListItemIcon>
-											<ListItemText primary={text} />
+								{pages.map((page, index) => (
+									<ListItem key={index} disablePadding>
+										<ListItemButton
+											onClick={() =>
+												(window.location.href = `/${page.name
+													.toLowerCase()
+													.replace(/\s+/g, '-')}`)
+											}
+										>
+											<ListItemIcon>{page.icon}</ListItemIcon>
+											<ListItemText primary={page.name} />
 										</ListItemButton>
 									</ListItem>
 								))}

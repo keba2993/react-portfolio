@@ -1,7 +1,7 @@
 import { AppBar, Toolbar, IconButton, Typography } from '@mui/material';
 import { Home, Code, Description, Email } from '@mui/icons-material';
 
-import useWindowDimensions from '../hooks/useWindowDimensions';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 import NavDrawer from './NavDrawer';
 import NavStack from './NavStack';
 

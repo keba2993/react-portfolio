@@ -8,7 +8,7 @@ import {
 	ListItemIcon,
 } from '@mui/material';
 import { Menu } from '@mui/icons-material';
-import { useStore } from '../store';
+import { useStore } from '../../store';
 
 function NavDrawer({
 	pages,

@@ -1,5 +1,5 @@
 import Hero from './components/Hero';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar/Navbar';
 import Experience from './components/Experience/Experience';
 import Skills from './components/Skills/Skills';
 import { Paper } from '@mui/material';
@@ -11,12 +11,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
 	return (
 		<BrowserRouter>
+			<Navbar />
 			<Routes>
 				<Route
 					path='/'
 					element={
 						<Paper>
-							<Navbar />
 							<Hero />
 							<Experience />
 							<Skills />

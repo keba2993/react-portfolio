@@ -11,16 +11,6 @@ import {
 import { experienceData } from '../../data';
 
 function ExperienceCard({ expNum }: { expNum: number }) {
-	// 	const CardImage = styled('img')(({ theme }) => ({
-	// 		[theme.breakpoints.down('sm')]: {
-	// 			width: '80px',
-	// 		},
-	// 		[theme.breakpoints.up('sm')]: {
-	// 			width: '80px',
-	// 			height: '80px',
-	// 		},
-	// 	}));
-
 	return (
 		<Card
 			sx={{

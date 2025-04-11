@@ -16,7 +16,12 @@ function App() {
 				<Route
 					path='/'
 					element={
-						<Paper>
+						<Paper
+							style={{
+								display: 'flex',
+								flexDirection: 'column',
+							}}
+						>
 							<Hero />
 							<Experience />
 							<Skills />

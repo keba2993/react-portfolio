@@ -7,3 +7,10 @@ export type ExperienceDataType = {
 	responsibilities: string[];
 	color: string;
 };
+
+export type ProjectDataType = {
+	title: string;
+	description: string;
+	date: string;
+	link: string;
+};

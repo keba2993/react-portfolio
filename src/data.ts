@@ -1,5 +1,5 @@
 // src/data.ts
-import { ExperienceDataType } from './types/experienceData';
+import { ExperienceDataType, ProjectDataType } from './types/dataTypes';
 
 export const experienceData: ExperienceDataType[] = [
 	{
@@ -52,5 +52,27 @@ export const experienceData: ExperienceDataType[] = [
 			'Presented demos of completed development and test work, led daily stand-up meetings, and assisted project leadership by refining requirements, providing feedback, and promoting team alignment in decision-making',
 		],
 		color: '#FF5733',
+	},
+];
+
+export const projectsData: ProjectDataType[] = [
+	{
+		title: 'Verse Tracker',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a ipsum placerat, ornare quam et, lobortis felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus sed cursus massa. In erat risus, mollis quis turpis sed, iaculis ornare massa. Quisque convallis ultrices purus nec fermentum. Vestibulum at viverra tortor. Fusce bibendum eget mi a ultricies. Donec mollis lacus vel egestas mollis. Sed nec ipsum eget nisi tempor luctus sed in neque. Vivamus est est, semper nec eros aliquam, congue placerat lacus. Nullam efficitur purus quis ipsum laoreet varius. Aenean id diam elementum, placerat tellus a, luctus libero. Praesent vulputate elit ac nibh dictum posuere.',
+		date: 'Oct 2024',
+		link: 'https://example.com/project1',
+	},
+	{
+		title: 'Project Title 2',
+		description: 'Project Description 2',
+		date: 'Project Date 2',
+		link: 'https://example.com/project2',
+	},
+	{
+		title: 'Project Title 3',
+		description: 'Project Description 3',
+		date: 'Project Date 3',
+		link: 'https://example.com/project3',
 	},
 ];

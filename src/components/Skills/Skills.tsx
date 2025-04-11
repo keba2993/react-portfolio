@@ -21,6 +21,7 @@ function Skills() {
 		'Playwright',
 		'MaterialUI',
 	];
+
 	return (
 		<div
 			style={{
@@ -28,6 +29,7 @@ function Skills() {
 				justifyContent: 'center',
 				flexWrap: 'wrap',
 				maxWidth: '100%',
+				paddingBottom: '2rem',
 			}}
 		>
 			{skillList.map((skill) => {

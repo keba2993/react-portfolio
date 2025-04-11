@@ -31,6 +31,13 @@ const theme = createTheme({
 				},
 			},
 		},
+		MuiCard: {
+			styleOverrides: {
+				root: {
+					boxShadow: '0 0.25em 0.5em 0.5em rgba(0, 0, 0, 0.2)',
+				},
+			},
+		},
 	},
 });
 

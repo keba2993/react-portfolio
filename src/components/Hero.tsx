@@ -24,7 +24,7 @@ function Hero() {
 					sx={{
 						display: 'flex',
 						alignItems: 'center',
-						padding: '0px',
+						marginTop: '0.25rem',
 					}}
 					disableGutters
 				>

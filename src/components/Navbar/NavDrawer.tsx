@@ -32,7 +32,9 @@ function NavDrawer({
 										.replace(/\s+/g, '-')}`)
 								}
 							>
-								<ListItemIcon>{page.icon}</ListItemIcon>
+								<ListItemIcon sx={{ minWidth: '35px' }}>
+									{page.icon}
+								</ListItemIcon>
 								<ListItemText primary={page.name} />
 							</ListItemButton>
 						</ListItem>

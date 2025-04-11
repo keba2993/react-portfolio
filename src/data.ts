@@ -59,20 +59,15 @@ export const projectsData: ProjectDataType[] = [
 	{
 		title: 'Verse Tracker',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a ipsum placerat, ornare quam et, lobortis felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus sed cursus massa. In erat risus, mollis quis turpis sed, iaculis ornare massa. Quisque convallis ultrices purus nec fermentum. Vestibulum at viverra tortor. Fusce bibendum eget mi a ultricies. Donec mollis lacus vel egestas mollis. Sed nec ipsum eget nisi tempor luctus sed in neque. Vivamus est est, semper nec eros aliquam, congue placerat lacus. Nullam efficitur purus quis ipsum laoreet varius. Aenean id diam elementum, placerat tellus a, luctus libero. Praesent vulputate elit ac nibh dictum posuere.',
+			'A JavaScript application that allows users to track their favorite verses and share them with friends. Users can add verses anytiem and see all other added verses from other users.',
 		date: 'Oct 2024',
-		link: 'https://example.com/project1',
+		link: 'https://verse-tracker-app.netlify.app/',
 	},
 	{
-		title: 'Project Title 2',
-		description: 'Project Description 2',
-		date: 'Project Date 2',
-		link: 'https://example.com/project2',
-	},
-	{
-		title: 'Project Title 3',
-		description: 'Project Description 3',
-		date: 'Project Date 3',
-		link: 'https://example.com/project3',
+		title: 'Business Card',
+		description:
+			'A simple React app to briefly introduce myself and provides basic information about me and my work. Provides easy acces to all my relevant accounts such as LinkedId, email, GitHub, and LeetCode.',
+		date: 'July 2024',
+		link: 'https://keba2993.github.io/react-card/',
 	},
 ];

@@ -10,7 +10,7 @@ function Navbar() {
 
 	const pages = [
 		{ name: 'Projects', icon: <Code /> },
-		{ name: 'Resume', icon: <Description /> },
+		{ name: 'About', icon: <Description /> },
 		{ name: 'Contact Me', icon: <Email /> },
 	];
 

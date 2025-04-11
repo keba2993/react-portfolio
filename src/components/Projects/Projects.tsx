@@ -17,7 +17,7 @@ function Projects() {
 				flexDirection: 'column',
 			}}
 		>
-			<Typography variant='h4' style={{ margin: '1rem' }}>
+			<Typography variant='h4' style={{ margin: '1rem 1rem 0 1rem' }}>
 				Personal Projects
 			</Typography>
 			{projectsData.map((project, index) => (

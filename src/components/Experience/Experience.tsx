@@ -13,7 +13,12 @@ function Experience() {
 	return (
 		<>
 			{width > 600 ? (
-				<Box display='flex' alignItems='center' justifyContent='center'>
+				<Box
+					display='flex'
+					alignItems='center'
+					justifyContent='center'
+					sx={{ height: '35rem' }}
+				>
 					<ExperienceTimeline />
 					<AnimatePresence mode='popLayout'>
 						{isActive != -1 && (

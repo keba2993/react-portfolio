@@ -68,7 +68,11 @@ function ExperienceTimeline() {
 						);
 					})
 				) : (
-					<>
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ duration: 2.4 }}
+					>
 						<TimelineItem>
 							<TimelineSeparator>
 								<TimelineConnector sx={{ height: '1rem' }} />
@@ -83,7 +87,7 @@ function ExperienceTimeline() {
 								<TimelineConnector sx={{ height: '1rem' }} />
 							</TimelineSeparator>
 						</TimelineItem>
-					</>
+					</motion.div>
 				)}
 			</Timeline>
 		</motion.div>

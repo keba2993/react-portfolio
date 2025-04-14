@@ -4,6 +4,7 @@ import ExperienceList from './ExperienceList';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 import { motion, AnimatePresence } from 'motion/react';
 import { useStore } from '../../store';
+import { Box } from '@mui/material';
 
 function Experience() {
 	const { width } = useWindowDimensions();
@@ -12,7 +13,7 @@ function Experience() {
 	return (
 		<>
 			{width > 600 ? (
-				<>
+				<Box display='flex' alignItems='center' justifyContent='center'>
 					<ExperienceTimeline />
 					<AnimatePresence mode='popLayout'>
 						{isActive != -1 && (
@@ -26,7 +27,7 @@ function Experience() {
 							</motion.div>
 						)}
 					</AnimatePresence>
-				</>
+				</Box>
 			) : (
 				<ExperienceList />
 			)}

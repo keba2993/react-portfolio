@@ -11,9 +11,10 @@ import {
 import { motion } from 'motion/react';
 import { useStore } from '../../store';
 import { experienceData } from '../../data';
+import { Cancel } from '@mui/icons-material';
 
 function ExperienceTimeline() {
-	const { setIsActive } = useStore();
+	const { isActive, setIsActive } = useStore();
 
 	const LogoStepIcon = ({ img, num }: { img: string; num: number }) => {
 		return (
@@ -38,33 +39,52 @@ function ExperienceTimeline() {
 					maxWidth: '50rem',
 				}}
 			>
-				{experienceData.map((item, index) => {
-					return (
-						<TimelineItem key={index}>
-							<TimelineOppositeContent
-								sx={{ m: 'auto 0', minWidth: '5rem' }}
-								align='right'
-								variant='body2'
-								color='text.secondary'
-							>
-								{item.startDate} - {item.endDate}
-							</TimelineOppositeContent>
+				{isActive == -1 ? (
+					experienceData.map((item, index) => {
+						return (
+							<TimelineItem key={index}>
+								<TimelineOppositeContent
+									sx={{ m: 'auto 0', minWidth: '5rem' }}
+									align='right'
+									variant='body1'
+									color='text.secondary'
+								>
+									{item.startDate} - {item.endDate}
+								</TimelineOppositeContent>
+								<TimelineSeparator>
+									<TimelineConnector sx={{ height: '1rem' }} />
+									<TimelineDot color='secondary'>
+										<LogoStepIcon img={item.imagePath} num={index} />
+									</TimelineDot>
+									<TimelineConnector sx={{ height: '1rem' }} />
+								</TimelineSeparator>
+								<TimelineContent>
+									<Typography variant='h6' component='span'>
+										{item.companyName}
+									</Typography>
+									<Typography>{item.jobTitle}</Typography>
+								</TimelineContent>
+							</TimelineItem>
+						);
+					})
+				) : (
+					<>
+						<TimelineItem>
 							<TimelineSeparator>
 								<TimelineConnector sx={{ height: '1rem' }} />
 								<TimelineDot color='secondary'>
-									<LogoStepIcon img={item.imagePath} num={index} />
+									<Cancel
+										onClick={() => setIsActive(-1)}
+										style={{ cursor: 'pointer' }}
+										fontSize='large'
+										color='error'
+									/>
 								</TimelineDot>
 								<TimelineConnector sx={{ height: '1rem' }} />
 							</TimelineSeparator>
-							<TimelineContent>
-								<Typography variant='h6' component='span'>
-									{item.companyName}
-								</Typography>
-								<Typography>{item.jobTitle}</Typography>
-							</TimelineContent>
 						</TimelineItem>
-					);
-				})}
+					</>
+				)}
 			</Timeline>
 		</motion.div>
 	);

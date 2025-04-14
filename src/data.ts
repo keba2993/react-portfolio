@@ -82,7 +82,7 @@ export const aboutData: AboutDateType[] = [
 		description:
 			'I volunteer as a small group leader for the youth group at my church where I lead a small group of high school boys helping them grow in their faith and relationship with Christ.',
 		year: '2024 - Present',
-		link: 'https://www.redrockschurch.com/',
+		link: 'https://www.redrockschurch.com/youth/',
 	},
 	{
 		title: 'Red Rocks Kids',
@@ -90,7 +90,7 @@ export const aboutData: AboutDateType[] = [
 		description:
 			'I am a K-1 volunteer for the kids ministry at my church where I serve families with young children to help keep their kids safe during services while teaching them about Christ.',
 		year: '2023 - Present',
-		link: 'https://www.redrockschurch.com/',
+		link: 'https://www.redrockschurch.com/ministries/kids/',
 	},
 	{
 		title: "CU Boulder Men's Soccer Club",
@@ -98,7 +98,7 @@ export const aboutData: AboutDateType[] = [
 		description:
 			"During my college years I participated as a player and a captain on the CU Boulder Men's Club Soccer - Gold team. Through soccer I have developed a deep appreciation team collaboration, leadership and work ethic.",
 		year: '2021 - 2023',
-		link: 'https://cubouldersoccer.com/',
+		link: 'https://www.colorado.edu/sportclubs/mens-sports/mens-soccer',
 	},
 	{
 		title: 'Student Mobilization (StuMo)',
@@ -106,6 +106,6 @@ export const aboutData: AboutDateType[] = [
 		description:
 			'At CU Boulder I led and organized bible studies and other events for Student Mobilization - a student lead ministry on cammpus that focuses on growing students into disciples of Christ.',
 		year: '2021 - 2024',
-		link: 'https://www.stumo.org/',
+		link: 'https://www.stumowest.org/',
 	},
 ];

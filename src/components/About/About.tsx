@@ -37,7 +37,6 @@ function Resume() {
 							display={'flex'}
 							alignItems={'center'}
 							justifyContent={'space-between'}
-							sx={{ marginBottom: '0.5rem' }}
 						>
 							<Typography variant='h5'>{item.title}</Typography>
 							<Typography
@@ -49,13 +48,21 @@ function Resume() {
 							</Typography>
 						</Box>
 
+						<Typography
+							variant='body1'
+							color='primary.main'
+							sx={{ marginBottom: '0.5rem' }}
+						>
+							{item.role}
+						</Typography>
+
 						<Typography variant='body2' color='text.secondary'>
 							{item.description}
 						</Typography>
 					</CardContent>
 					<CardActions>
 						<Button size='small' href={item.link} target='_blank'>
-							View Project
+							More Info
 						</Button>
 					</CardActions>
 				</Card>

@@ -14,3 +14,11 @@ export type ProjectDataType = {
 	date: string;
 	link: string;
 };
+
+export type AboutDateType = {
+	title: string;
+	role: string;
+	description: string;
+	year: string;
+	link: string;
+};

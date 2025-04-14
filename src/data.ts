@@ -1,5 +1,9 @@
 // src/data.ts
-import { ExperienceDataType, ProjectDataType } from './types/dataTypes';
+import {
+	ExperienceDataType,
+	ProjectDataType,
+	AboutDateType,
+} from './types/dataTypes';
 
 export const experienceData: ExperienceDataType[] = [
 	{
@@ -69,5 +73,39 @@ export const projectsData: ProjectDataType[] = [
 			'A simple React app to briefly introduce myself and provides basic information about me and my work. Provides easy acces to all my relevant accounts such as LinkedId, email, GitHub, and LeetCode.',
 		date: 'July 2024',
 		link: 'https://keba2993.github.io/react-card/',
+	},
+];
+export const aboutData: AboutDateType[] = [
+	{
+		title: 'Red Rocks Youth',
+		role: 'Small Group Leader',
+		description:
+			'I volunteer as a small group leader for the youth group at my church where I lead a small group of high school boys helping them grow in their faith and relationship with Christ.',
+		year: '2024 - Present',
+		link: 'https://www.redrockschurch.com/',
+	},
+	{
+		title: 'Red Rocks Kids',
+		role: 'K-1 Volunteer',
+		description:
+			'I am a K-1 volunteer for the kids ministry at my church where I serve families with young children to help keep their kids safe during services while teaching them about Christ.',
+		year: '2023 - Present',
+		link: 'https://www.redrockschurch.com/',
+	},
+	{
+		title: "CU Boulder Men's Soccer Club",
+		role: 'Captain & Player',
+		description:
+			"During my college years I participated as a player and a captain on the CU Boulder Men's Club Soccer - Gold team. Through soccer I have developed a deep appreciation team collaboration, leadership and work ethic.",
+		year: '2021 - 2023',
+		link: 'https://cubouldersoccer.com/',
+	},
+	{
+		title: 'Student Mobilization (StuMo)',
+		role: 'Organization Admin',
+		description:
+			'At CU Boulder I led and organized bible studies and other events for Student Mobilization - a student lead ministry on cammpus that focuses on growing students into disciples of Christ.',
+		year: '2021 - 2024',
+		link: 'https://www.stumo.org/',
 	},
 ];

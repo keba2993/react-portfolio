@@ -28,8 +28,9 @@ function Skills() {
 				display: 'flex',
 				justifyContent: 'center',
 				flexWrap: 'wrap',
-				maxWidth: '100%',
+				maxWidth: '1280px',
 				paddingBottom: '2rem',
+				margin: '0 auto',
 			}}
 		>
 			{skillList.map((skill) => {

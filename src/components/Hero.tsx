@@ -4,7 +4,15 @@ import Grid from '@mui/material/Grid2';
 
 function Hero() {
 	return (
-		<Grid container spacing={{ xs: 1, sm: 2, md: 2, lg: 4 }} direction='row'>
+		<Grid
+			container
+			spacing={{ xs: 1, sm: 2, md: 2 }}
+			direction='row'
+			paddingTop={{ xs: '0.5rem', sm: '1rem', md: '2rem', lg: '3rem' }}
+			paddingX={{ xs: '0.5rem', sm: '1rem', md: '2rem', lg: '3rem' }}
+			maxWidth={'1280px'}
+			marginX={'auto'}
+		>
 			<Grid
 				size={{ xs: 12, sm: 12, md: 4, lg: 4 }}
 				sx={{

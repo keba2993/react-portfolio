@@ -5,7 +5,6 @@ import Skills from './components/Skills/Skills';
 import { Paper } from '@mui/material';
 import Projects from './components/Projects/Projects';
 import About from './components/About/About';
-import Contact from './components/Contact/Contact';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -30,7 +29,6 @@ function App() {
 				/>
 				<Route path='/projects' element={<Projects />} />
 				<Route path='/about' element={<About />} />
-				<Route path='/contact-me' element={<Contact />} />
 			</Routes>
 		</BrowserRouter>
 	);

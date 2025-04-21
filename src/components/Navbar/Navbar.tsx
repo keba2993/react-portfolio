@@ -1,5 +1,5 @@
 import { AppBar, Toolbar, IconButton, Typography } from '@mui/material';
-import { Home, Code, Description, Email } from '@mui/icons-material';
+import { Home, Code, Description } from '@mui/icons-material';
 
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 import NavDrawer from './NavDrawer';
@@ -11,7 +11,6 @@ function Navbar() {
 	const pages = [
 		{ name: 'Projects', icon: <Code /> },
 		{ name: 'About', icon: <Description /> },
-		{ name: 'Contact Me', icon: <Email /> },
 	];
 
 	return (

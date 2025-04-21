@@ -1,6 +1,5 @@
 import {
 	Typography,
-	Paper,
 	Card,
 	CardContent,
 	Box,
@@ -24,25 +23,30 @@ function Resume() {
 		},
 	}));
 
+	const AboutTitle = styled('h4')(({ theme }) => ({
+		margin: '1rem 1rem 0 1rem',
+		textAlign: 'left',
+		[theme.breakpoints.up('sm')]: {
+			textAlign: 'center',
+			margin: '1.5rem auto',
+		},
+	}));
+
 	return (
-		<Paper
-			style={{
-				display: 'flex',
-				flexDirection: 'column',
-			}}
-		>
+		<>
+			<AboutTitle>
+				<Typography variant='h4' gutterBottom>
+					About
+				</Typography>
+			</AboutTitle>
 			<Typography
-				variant='h4'
-				gutterBottom
-				style={{ margin: '1rem 1rem 0 1rem' }}
+				variant='body1'
+				marginX={{ xs: '1rem', sm: 'auto' }}
+				sx={{ maxWidth: '35rem' }}
 			>
-				About
-			</Typography>
-			<Typography variant='body1' sx={{ margin: '1rem' }}>
-				In addition to all my technical work and skills, I also partake in many
+				In addition to my technical work and skills, I also enjoy many
 				extracurricular activites. There is much more to a person than just
-				their technical acumen. Scoll down to learn a bit more about my work
-				outside of work!
+				their technical acumen.
 			</Typography>
 			<AboutContainer>
 				{aboutData.map((item, index) => (
@@ -83,7 +87,7 @@ function Resume() {
 					</Card>
 				))}
 			</AboutContainer>
-		</Paper>
+		</>
 	);
 }
 

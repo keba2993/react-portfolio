@@ -4,7 +4,6 @@ import {
 	Typography,
 	CardActions,
 	Button,
-	Paper,
 	Box,
 } from '@mui/material';
 import { projectsData } from '../../data';
@@ -19,23 +18,28 @@ function Projects() {
 		[theme.breakpoints.up('sm')]: {
 			flexDirection: 'row',
 			flexWrap: 'wrap',
-			justifyContent: 'space-around',
+			justifyContent: 'space-evenly',
+		},
+	}));
+
+	const ProjectTitle = styled('h4')(({ theme }) => ({
+		margin: '1rem 1rem 0 1rem',
+		textAlign: 'left',
+		[theme.breakpoints.up('sm')]: {
+			textAlign: 'center',
+			margin: '1.5rem auto',
 		},
 	}));
 
 	return (
-		<Paper
-			style={{
-				display: 'flex',
-				flexDirection: 'column',
-			}}
-		>
-			<Typography variant='h4' style={{ margin: '1rem 1rem 0 1rem' }}>
-				Personal Projects
-			</Typography>
+		<>
+			<ProjectTitle>
+				<Typography variant='h4'>Personal Projects</Typography>
+			</ProjectTitle>
+
 			<ProjectContainer>
 				{projectsData.map((project, index) => (
-					<Card key={index} style={{ margin: '1rem', maxWidth: '30rem' }}>
+					<Card key={index} sx={{ margin: '1rem', maxWidth: '35rem' }}>
 						<CardContent>
 							<Box
 								display={'flex'}
@@ -65,7 +69,7 @@ function Projects() {
 					</Card>
 				))}
 			</ProjectContainer>
-		</Paper>
+		</>
 	);
 }
 

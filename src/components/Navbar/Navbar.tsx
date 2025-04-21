@@ -15,7 +15,7 @@ function Navbar() {
 	];
 
 	return (
-		<AppBar position='static'>
+		<AppBar position='sticky'>
 			<Toolbar>
 				<IconButton
 					size='large'
@@ -31,7 +31,11 @@ function Navbar() {
 				<Typography component='div' sx={{ flexGrow: 1 }}>
 					Kevin Barone
 				</Typography>
-				{width > 600 ? <NavStack pages={pages} /> : <NavDrawer pages={pages} />}
+				{width >= 600 ? (
+					<NavStack pages={pages} />
+				) : (
+					<NavDrawer pages={pages} />
+				)}
 			</Toolbar>
 		</AppBar>
 	);

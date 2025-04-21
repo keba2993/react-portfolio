@@ -17,7 +17,7 @@ function Experience() {
 					display='flex'
 					alignItems='center'
 					justifyContent='center'
-					sx={{ height: '35rem' }}
+					sx={{ height: '38rem' }}
 				>
 					<ExperienceTimeline />
 					<AnimatePresence mode='popLayout'>

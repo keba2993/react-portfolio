@@ -12,9 +12,11 @@ import { motion } from 'motion/react';
 import { useStore } from '../../store';
 import { experienceData } from '../../data';
 import { Cancel } from '@mui/icons-material';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 function ExperienceTimeline() {
 	const { isActive, setIsActive } = useStore();
+	const { width } = useWindowDimensions();
 
 	const LogoStepIcon = ({ img, num }: { img: string; num: number }) => {
 		return (
@@ -33,13 +35,13 @@ function ExperienceTimeline() {
 	};
 
 	return (
-		<motion.div layout>
+		<motion.div layout transition={{ duration: 0.3 }}>
 			<Timeline
 				sx={{
 					maxWidth: '50rem',
 				}}
 			>
-				{isActive == -1 ? (
+				{isActive == -1 || width >= 900 ? (
 					experienceData.map((item, index) => {
 						return (
 							<TimelineItem key={index}>
@@ -70,8 +72,8 @@ function ExperienceTimeline() {
 				) : (
 					<motion.div
 						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						transition={{ duration: 2.4 }}
+						animate={{ opacity: 1, transition: { delay: 0.2 } }}
+						transition={{ duration: 1.5 }}
 					>
 						<TimelineItem>
 							<TimelineSeparator>

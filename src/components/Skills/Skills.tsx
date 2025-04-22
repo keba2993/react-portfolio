@@ -17,6 +17,7 @@ function Skills() {
 		'Git',
 		'HTML',
 		'CSS',
+		'AWS',
 		'Redux',
 		'Playwright',
 		'MaterialUI',

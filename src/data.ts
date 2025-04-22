@@ -8,13 +8,13 @@ import {
 export const experienceData: ExperienceDataType[] = [
 	{
 		imagePath: '/cobank.svg',
-		jobTitle: 'Associtate Software Engineer, Full Stack',
+		jobTitle: 'Associate Software Engineer, Full Stack',
 		companyName: 'CoBank, ACB',
 		startDate: 'Nov 2024',
 		endDate: 'Present',
 		responsibilities: [
-			'Maintaining and enhacingin existing leasing platform ifrastructure to support the leasing business operations, including bug fixes and feature enhancements',
-			'Developing end-to-end Playwright tests to ensure the reliability and stability of the leasing platform, reducing tesing efforts from business users',
+			'Maintaining and enhancing existing leasing platform infrastructure to support the leasing business operations, through bug fixes and feature enhancements',
+			'Developing end-to-end Playwright tests to ensure the reliability and stability of the leasing platform, reducing testing efforts from business users',
 		],
 		color: '#FF5733',
 	},
@@ -26,7 +26,7 @@ export const experienceData: ExperienceDataType[] = [
 		endDate: 'Apr 2024',
 		responsibilities: [
 			'Oversaw project management efforts to ensure efficient team communication and development of features according to project milestones and goals',
-			'Spearheaded improvements to project management practices to create a more productive team environment leading to faster and higher quality feature development ',
+			'Spearheaded improvements to project management practices to create a more productive team environment leading to faster and higher-quality feature development',
 			'Assisted in back-end development efforts to create an internal API for device-to-device communication via WebSocket technology',
 		],
 		color: '#FF5733',
@@ -38,7 +38,7 @@ export const experienceData: ExperienceDataType[] = [
 		startDate: 'Jun 2023',
 		endDate: 'Aug 2023',
 		responsibilities: [
-			'Optimized an outdated legacy application, resulting in elevated UI/UX standards, streamlined reporting processes and amplified error identification capabilities by rewriting its codebase using modern technologies',
+			'Optimized an outdated legacy application, resulting in elevated UI/UX standards, streamlined reporting processes, and amplified error identification capabilities by rewriting its codebase using modern technologies',
 			'Collaborated within a diverse team of interns and designers, guided by a seasoned Tech Lead, to conceive and develop a modern full-stack web application in a challenging 10-week timeframe',
 			'Implemented an end-to-end testing suite with 85% test coverage using the Cypress framework, ensuring the reliability of individual application components and overall frontend integrity',
 		],
@@ -75,12 +75,13 @@ export const projectsData: ProjectDataType[] = [
 		link: 'https://keba2993.github.io/react-card/',
 	},
 ];
+
 export const aboutData: AboutDateType[] = [
 	{
 		title: 'Red Rocks Youth',
 		role: 'Small Group Leader',
 		description:
-			'I volunteer as a small group leader for the youth group at my church where I lead a small group of high school boys helping them grow in their faith and relationship with Christ.',
+			'I volunteer as a small group leader for the youth group at my church where I lead a small group of high school boys, helping them grow in their faith and relationship with Christ.',
 		year: '2024 - Present',
 		link: 'https://www.redrockschurch.com/youth/',
 	},
@@ -96,7 +97,7 @@ export const aboutData: AboutDateType[] = [
 		title: "CU Boulder Men's Soccer Club",
 		role: 'Captain & Player',
 		description:
-			"During my college years I participated as a player and a captain on the CU Boulder Men's Club Soccer - Gold team. Through soccer I have developed a deep appreciation team collaboration, leadership and work ethic.",
+			"During my college years, I participated as a player and a captain on the CU Boulder Men's Club Soccer - Gold team. Through soccer, I have developed a deep appreciation for team collaboration, leadership, and work ethic.",
 		year: '2021 - 2023',
 		link: 'https://www.colorado.edu/sportclubs/mens-sports/mens-soccer',
 	},
@@ -104,7 +105,7 @@ export const aboutData: AboutDateType[] = [
 		title: 'Student Mobilization (StuMo)',
 		role: 'Organization Admin',
 		description:
-			'At CU Boulder I led and organized bible studies and other events for Student Mobilization - a student lead ministry on cammpus that focuses on growing students into disciples of Christ.',
+			'At CU Boulder, I led and organized Bible studies and other events for Student Mobilization - a student-led ministry on campus that focuses on growing students into disciples of Christ.',
 		year: '2021 - 2024',
 		link: 'https://www.stumowest.org/',
 	},

@@ -77,20 +77,20 @@ function Hero() {
 					for new opportunities to learn and grow as a developer by working on
 					challenging projects. <br />
 					<br />
-					Growing up, I first discoverd my interest in programming while
+					Growing up, I first discovered my interest in programming while
 					watching my father work as a software engineer. I was finally able to
-					take my first Computer Basics cours in 6th grade. I quickly fell in
-					love with technology and always wanted to find new ways be creative
-					with technoligical platforms.
+					take my first Computer Basics course in 6th grade. I quickly fell in
+					love with technology and always wanted to find new ways to be creative
+					with technological platforms.
 					<br />
 					<br />
-					Through internships I gained experience in a diverse range of
+					Through internships, I gained experience in a diverse range of
 					development environments, including full-stack web development, mobile
 					development, and test engineering. I continue to push myself beyond my
 					limits, learning new technologies and frameworks to expand my
-					skillset. Taking ownership of my work and being a team leader has
-					always been a priority for me as I continue to grow my career in
-					software development.
+					skillset. Taking ownership of my work and being a team leader are
+					always priorities of mine as I seek to grow my career in software
+					development.
 				</Typography>
 			</Grid>
 		</Grid>

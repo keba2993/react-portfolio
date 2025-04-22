@@ -45,7 +45,7 @@ function Resume() {
 				sx={{ maxWidth: '35rem' }}
 			>
 				In addition to my technical work and skills, I also enjoy many
-				extracurricular activites. There is much more to a person than just
+				extracurricular activities. There is much more to a person than just
 				their technical acumen.
 			</Typography>
 			<AboutContainer>

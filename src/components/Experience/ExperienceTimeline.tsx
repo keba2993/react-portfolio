@@ -35,7 +35,7 @@ function ExperienceTimeline() {
 	};
 
 	return (
-		<motion.div layout transition={{ duration: 0.3 }}>
+		<motion.div layout>
 			<Timeline
 				sx={{
 					maxWidth: '50rem',
@@ -55,16 +55,22 @@ function ExperienceTimeline() {
 								</TimelineOppositeContent>
 								<TimelineSeparator>
 									<TimelineConnector sx={{ height: '1rem' }} />
-									<TimelineDot color='secondary'>
+									<TimelineDot sx={{ backgroundColor: 'transparent' }}>
 										<LogoStepIcon img={item.imagePath} num={index} />
 									</TimelineDot>
 									<TimelineConnector sx={{ height: '1rem' }} />
 								</TimelineSeparator>
-								<TimelineContent>
-									<Typography variant='h6' component='span'>
+								<TimelineContent
+									display={'flex'}
+									flexDirection={'column'}
+									justifyContent={'center'}
+								>
+									<Typography variant='h6' color='primary'>
 										{item.companyName}
 									</Typography>
-									<Typography>{item.jobTitle}</Typography>
+									<Typography color='secondary.main' variant='body1'>
+										{item.jobTitle}
+									</Typography>
 								</TimelineContent>
 							</TimelineItem>
 						);

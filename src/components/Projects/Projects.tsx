@@ -15,10 +15,10 @@ function Projects() {
 		flexDirection: 'column',
 		alignItems: 'center',
 		justifyContent: 'center',
+		maxWidth: '1280px',
 		[theme.breakpoints.up('sm')]: {
 			flexDirection: 'row',
 			flexWrap: 'wrap',
-			justifyContent: 'space-evenly',
 		},
 	}));
 
@@ -32,7 +32,13 @@ function Projects() {
 	}));
 
 	return (
-		<>
+		<Box
+			sx={{
+				display: 'flex',
+				flexDirection: 'column',
+				alignItems: 'center',
+			}}
+		>
 			<ProjectTitle>
 				<Typography variant='h4'>Personal Projects</Typography>
 			</ProjectTitle>
@@ -69,7 +75,7 @@ function Projects() {
 					</Card>
 				))}
 			</ProjectContainer>
-		</>
+		</Box>
 	);
 }
 

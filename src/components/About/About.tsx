@@ -9,17 +9,16 @@ import {
 import { aboutData } from '../../data';
 import { styled } from '@mui/material/styles';
 
-function Resume() {
+function About() {
 	const AboutContainer = styled('div')(({ theme }) => ({
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center',
 		justifyContent: 'center',
+		maxWidth: '1280px',
 		[theme.breakpoints.up('sm')]: {
 			flexDirection: 'row',
 			flexWrap: 'wrap',
-			justifyContent: 'space-around',
-			alignItems: 'flex-start',
 		},
 	}));
 
@@ -33,7 +32,13 @@ function Resume() {
 	}));
 
 	return (
-		<>
+		<Box
+			sx={{
+				display: 'flex',
+				flexDirection: 'column',
+				alignItems: 'center',
+			}}
+		>
 			<AboutTitle>
 				<Typography variant='h4' gutterBottom>
 					About
@@ -48,9 +53,10 @@ function Resume() {
 				extracurricular activities. There is much more to a person than just
 				their technical acumen.
 			</Typography>
+
 			<AboutContainer>
 				{aboutData.map((item, index) => (
-					<Card key={index} style={{ margin: '1rem', maxWidth: '35rem' }}>
+					<Card key={index} sx={{ margin: '1rem', maxWidth: '35rem' }}>
 						<CardContent>
 							<Box
 								display={'flex'}
@@ -87,8 +93,8 @@ function Resume() {
 					</Card>
 				))}
 			</AboutContainer>
-		</>
+		</Box>
 	);
 }
 
-export default Resume;
+export default About;

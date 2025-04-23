@@ -9,6 +9,7 @@ import {
 } from '@mui/material';
 import { Menu } from '@mui/icons-material';
 import { useStore } from '../../store';
+import { Link } from 'react-router-dom';
 
 function NavDrawer({
 	pages,
@@ -25,18 +26,18 @@ function NavDrawer({
 				<List>
 					{pages.map((page, index) => (
 						<ListItem key={index} disablePadding>
-							<ListItemButton
-								onClick={() =>
-									(window.location.href = `/${page.name
-										.toLowerCase()
-										.replace(/\s+/g, '-')}`)
-								}
+							<Link
+								to={`/${page.name.toLowerCase()}`}
+								onClick={setDrawerOpen}
+								style={{ textDecoration: 'none', color: '#efefef' }}
 							>
-								<ListItemIcon sx={{ minWidth: '35px' }}>
-									{page.icon}
-								</ListItemIcon>
-								<ListItemText primary={page.name} />
-							</ListItemButton>
+								<ListItemButton sx={{ minWidth: '8rem' }}>
+									<ListItemIcon sx={{ minWidth: '35px' }}>
+										{page.icon}
+									</ListItemIcon>
+									<ListItemText primary={page.name} />
+								</ListItemButton>
+							</Link>
 						</ListItem>
 					))}
 				</List>

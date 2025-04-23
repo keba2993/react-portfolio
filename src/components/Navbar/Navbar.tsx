@@ -4,6 +4,7 @@ import { Home, Code, Description } from '@mui/icons-material';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 import NavDrawer from './NavDrawer';
 import NavStack from './NavStack';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
 	const { width } = useWindowDimensions();
@@ -16,17 +17,16 @@ function Navbar() {
 	return (
 		<AppBar position='sticky'>
 			<Toolbar>
-				<IconButton
-					size='large'
-					edge='start'
-					color='primary'
-					aria-label='nav-home'
-					onClick={() => {
-						window.location.href = '/';
-					}}
-				>
-					<Home />
-				</IconButton>
+				<Link to='/'>
+					<IconButton
+						size='large'
+						edge='start'
+						color='primary'
+						aria-label='nav-home'
+					>
+						<Home sx={{ fontSize: '1.05em' }} />
+					</IconButton>
+				</Link>
 				<Typography component='div' sx={{ flexGrow: 1 }}>
 					Kevin Barone
 				</Typography>

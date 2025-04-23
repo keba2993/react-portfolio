@@ -1,20 +1,17 @@
 import { Button, Stack } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 function NavStack({ pages }: { pages: { name: string; icon: JSX.Element }[] }) {
 	return (
 		<Stack direction='row' spacing={1}>
 			{pages.map((page, index) => (
-				<Button
+				<Link
 					key={index}
-					color='inherit'
-					onClick={() =>
-						(window.location.href = `/${page.name
-							.toLowerCase()
-							.replace(/\s+/g, '-')}`)
-					}
+					to={`/${page.name.toLowerCase()}`}
+					style={{ textDecoration: 'none' }}
 				>
-					{page.name}
-				</Button>
+					<Button color='primary'>{page.name}</Button>
+				</Link>
 			))}
 		</Stack>
 	);

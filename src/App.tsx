@@ -1,36 +1,25 @@
-import Hero from './components/Hero';
 import Navbar from './components/Navbar/Navbar';
-import Experience from './components/Experience/Experience';
-import Skills from './components/Skills/Skills';
-import { Paper } from '@mui/material';
+import Home from './components/Home';
 import Projects from './components/Projects/Projects';
 import About from './components/About/About';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'motion/react';
+import transition from './transition';
 
 function App() {
+	const location = useLocation();
+
 	return (
-		<BrowserRouter>
+		<>
 			<Navbar />
-			<Routes>
-				<Route
-					path='/'
-					element={
-						<Paper
-							style={{
-								display: 'flex',
-								flexDirection: 'column',
-							}}
-						>
-							<Hero />
-							<Experience />
-							<Skills />
-						</Paper>
-					}
-				/>
-				<Route path='/projects' element={<Projects />} />
-				<Route path='/about' element={<About />} />
-			</Routes>
-		</BrowserRouter>
+			<AnimatePresence mode='wait'>
+				<Routes location={location} key={location.pathname}>
+					<Route path='/' element={transition(<Home />)} />
+					<Route path='/projects' element={transition(<Projects />)} />
+					<Route path='/about' element={transition(<About />)} />
+				</Routes>
+			</AnimatePresence>
+		</>
 	);
 }
 

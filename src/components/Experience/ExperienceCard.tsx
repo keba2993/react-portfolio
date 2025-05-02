@@ -15,13 +15,16 @@ function ExperienceCard({ expNum }: { expNum: number }) {
 		<Card
 			sx={{
 				maxWidth: '50rem',
-				margin: '0.5rem',
 				height: '100%',
-				boxShadow: '0 0.25em 0.5em 0.5em rgba(0, 0, 0, 0.2)',
 			}}
 		>
 			<CardContent>
-				<Box display={'flex'} alignItems={'center'} justifyContent={'left'}>
+				<Box
+					display={'flex'}
+					alignItems={'center'}
+					justifyContent={'left'}
+					padding={'0'}
+				>
 					<CardMedia
 						component='img'
 						alt={`${experienceData[expNum].companyName} logo`}

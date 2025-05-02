@@ -46,14 +46,14 @@ function Skills() {
 							sx={{
 								boxShadow: `0.25em 0.25em 0.25em ${theme.palette.primary.main}, -0.25em -0.25em 0.25em ${theme.palette.secondary.main}`,
 								borderRadius: '5%',
-								margin: '0.5rem',
+								margin: '1rem',
 								minWidth: '8rem',
 								display: 'flex',
 								justifyContent: 'center',
 								alignItems: 'center',
 							}}
 						>
-							<CardContent>
+							<CardContent sx={{ padding: '1rem' }}>
 								<Typography variant='body1' sx={{ fontSize: '1.2rem' }}>
 									{skill}
 								</Typography>

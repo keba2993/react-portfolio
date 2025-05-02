@@ -1,6 +1,11 @@
-import { AppBar, Toolbar, IconButton, Typography } from '@mui/material';
+import {
+	AppBar,
+	Toolbar,
+	IconButton,
+	Typography,
+	useScrollTrigger,
+} from '@mui/material';
 import { Home, Code, Description } from '@mui/icons-material';
-
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 import NavDrawer from './NavDrawer';
 import NavStack from './NavStack';
@@ -14,8 +19,17 @@ function Navbar() {
 		{ name: 'About', icon: <Description /> },
 	];
 
+	const trigger = useScrollTrigger({
+		disableHysteresis: true,
+		threshold: 5,
+	});
+
 	return (
-		<AppBar position='sticky'>
+		<AppBar
+			position='sticky'
+			elevation={trigger ? 2 : 1}
+			sx={trigger ? {} : { boxShadow: '0' }}
+		>
 			<Toolbar>
 				<Link to='/'>
 					<IconButton

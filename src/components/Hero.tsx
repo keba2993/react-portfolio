@@ -8,8 +8,8 @@ function Hero() {
 			container
 			spacing={{ xs: 1, sm: 2, md: 2 }}
 			direction='row'
-			paddingTop={{ xs: '0.5rem', sm: '1rem', md: '2rem', lg: '3rem' }}
-			paddingX={{ xs: '0.5rem', sm: '1rem', md: '2rem', lg: '3rem' }}
+			paddingTop={{ xs: '1rem', sm: '1.5rem', md: '2rem', lg: '3rem' }}
+			paddingX={{ xs: '1.5rem', sm: '2rem', md: '3rem', lg: '3rem' }}
 			maxWidth={'1280px'}
 			marginX={'auto'}
 		>
@@ -33,7 +33,7 @@ function Hero() {
 						display: 'flex',
 						alignItems: 'center',
 						justifyContent: 'flex-start',
-						marginTop: '0.25rem',
+						marginTop: '0.5rem',
 					}}
 					disableGutters
 				>
@@ -69,7 +69,7 @@ function Hero() {
 				</Container>
 			</Grid>
 			<Grid size={{ xs: 12, sm: 12, md: 8, lg: 8 }} sx={{ padding: '1rem' }}>
-				<Typography variant='body1' align='justify'>
+				<Typography variant='body1'>
 					I am a fullstack developer with a passion for building robust web
 					applications and empowering software teams to develop impactful
 					products. I have experience working with a variety of technologies

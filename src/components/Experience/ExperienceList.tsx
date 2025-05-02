@@ -13,7 +13,8 @@ function ExperienceList() {
 						style={{
 							display: 'flex',
 							justifyContent: 'center',
-							margin: '1rem 1.5rem',
+							margin: '1rem',
+							borderBottom: '1px solid #ccc',
 						}}
 					>
 						<ExperienceCard key={index} expNum={index} />

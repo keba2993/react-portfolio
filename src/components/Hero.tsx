@@ -8,8 +8,8 @@ function Hero() {
 			container
 			spacing={{ xs: 1, sm: 2, md: 2 }}
 			direction='row'
-			paddingTop={{ xs: '1rem', sm: '1.5rem', md: '2rem', lg: '3rem' }}
-			paddingX={{ xs: '1.5rem', sm: '2rem', md: '3rem', lg: '3rem' }}
+			paddingY={{ xs: '1rem', sm: '1.5rem', md: '2rem', lg: '2rem' }}
+			paddingX={{ xs: '1rem', sm: '1rem', md: '2rem', lg: '3rem' }}
 			maxWidth={'1280px'}
 			marginX={'auto'}
 		>

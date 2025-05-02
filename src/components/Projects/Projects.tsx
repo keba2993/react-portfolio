@@ -4,6 +4,7 @@ import {
 	Typography,
 	CardActions,
 	Button,
+	Paper,
 	Box,
 } from '@mui/material';
 import { projectsData } from '../../data';
@@ -16,14 +17,16 @@ function Projects() {
 		alignItems: 'center',
 		justifyContent: 'center',
 		maxWidth: '1280px',
+		margin: '1rem',
 		[theme.breakpoints.up('sm')]: {
 			flexDirection: 'row',
 			flexWrap: 'wrap',
+			gap: '2rem',
 		},
 	}));
 
 	const ProjectTitle = styled('h4')(({ theme }) => ({
-		margin: '1rem 1rem 0 1rem',
+		margin: '1.5rem auto 0 2rem',
 		textAlign: 'left',
 		[theme.breakpoints.up('sm')]: {
 			textAlign: 'center',
@@ -32,11 +35,12 @@ function Projects() {
 	}));
 
 	return (
-		<Box
+		<Paper
 			sx={{
 				display: 'flex',
 				flexDirection: 'column',
 				alignItems: 'center',
+				height: '100vh',
 			}}
 		>
 			<ProjectTitle>
@@ -45,7 +49,15 @@ function Projects() {
 
 			<ProjectContainer>
 				{projectsData.map((project, index) => (
-					<Card key={index} sx={{ margin: '1rem', maxWidth: '35rem' }}>
+					<Card
+						key={index}
+						square
+						sx={{
+							padding: '1rem',
+							maxWidth: '35rem',
+							borderBottom: '1px solid #ccc',
+						}}
+					>
 						<CardContent>
 							<Box
 								display={'flex'}
@@ -67,7 +79,7 @@ function Projects() {
 								{project.description}
 							</Typography>
 						</CardContent>
-						<CardActions>
+						<CardActions sx={{ paddingLeft: '0' }}>
 							<Button size='small' href={project.link} target='_blank'>
 								View Project
 							</Button>
@@ -75,7 +87,7 @@ function Projects() {
 					</Card>
 				))}
 			</ProjectContainer>
-		</Box>
+		</Paper>
 	);
 }
 

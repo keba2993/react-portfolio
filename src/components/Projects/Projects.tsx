@@ -6,6 +6,7 @@ import {
 	Button,
 	Paper,
 	Box,
+	CardActionArea,
 } from '@mui/material';
 import { projectsData } from '../../data';
 import { styled } from '@mui/material/styles';
@@ -58,32 +59,34 @@ function Projects() {
 							borderBottom: '1px solid #ccc',
 						}}
 					>
-						<CardContent>
-							<Box
-								display={'flex'}
-								alignItems={'center'}
-								justifyContent={'space-between'}
-								sx={{ marginBottom: '0.5rem' }}
-							>
-								<Typography variant='h5'>{project.title}</Typography>
-								<Typography
-									variant='caption'
-									display='block'
-									color='secondary.main'
+						<CardActionArea href={project.link} target='_blank'>
+							<CardContent>
+								<Box
+									display={'flex'}
+									alignItems={'center'}
+									justifyContent={'space-between'}
+									sx={{ marginBottom: '0.5rem' }}
 								>
-									{project.date}
-								</Typography>
-							</Box>
+									<Typography variant='h5'>{project.title}</Typography>
+									<Typography
+										variant='caption'
+										display='block'
+										color='secondary.main'
+									>
+										{project.date}
+									</Typography>
+								</Box>
 
-							<Typography variant='body2' color='text.secondary'>
-								{project.description}
-							</Typography>
-						</CardContent>
-						<CardActions sx={{ paddingLeft: '0' }}>
-							<Button size='small' href={project.link} target='_blank'>
-								View Project
-							</Button>
-						</CardActions>
+								<Typography variant='body2' color='text.secondary'>
+									{project.description}
+								</Typography>
+							</CardContent>
+							<CardActions sx={{ paddingLeft: '0' }}>
+								<Button size='small' href={project.link} target='_blank'>
+									View Project
+								</Button>
+							</CardActions>
+						</CardActionArea>
 					</Card>
 				))}
 			</ProjectContainer>

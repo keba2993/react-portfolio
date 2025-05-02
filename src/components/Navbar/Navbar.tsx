@@ -3,7 +3,6 @@ import {
 	Toolbar,
 	IconButton,
 	Button,
-	Typography,
 	useScrollTrigger,
 } from '@mui/material';
 import { Home, Code, Description } from '@mui/icons-material';
@@ -16,8 +15,8 @@ function Navbar() {
 	const { width } = useWindowDimensions();
 
 	const pages = [
-		{ name: 'Projects', icon: <Code /> },
-		{ name: 'About', icon: <Description /> },
+		{ name: 'PROJECTS', icon: <Code /> },
+		{ name: 'ABOUT', icon: <Description /> },
 	];
 
 	const trigger = useScrollTrigger({

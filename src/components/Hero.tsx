@@ -33,36 +33,32 @@ function Hero() {
 						display: 'flex',
 						alignItems: 'center',
 						justifyContent: 'flex-start',
-						marginTop: '0.5rem',
 					}}
 					disableGutters
 				>
 					<IconButton
-						size='large'
 						aria-label='nav-github'
 						color='secondary'
 						href='https://github.com/keba2993'
-						sx={{ margin: 0, paddingTop: '0' }}
+						sx={{ margin: 0 }}
 					>
 						<GitHub sx={{ fontSize: '1.25em' }} />
 					</IconButton>
 					<IconButton
-						size='large'
 						edge='end'
 						color='secondary'
 						aria-label='nav-linkedin'
 						href='https://www.linkedin.com/in/kbarone18/'
-						sx={{ margin: 0, paddingTop: '0' }}
+						sx={{ margin: 0 }}
 					>
 						<LinkedIn sx={{ fontSize: '1.25em' }} />
 					</IconButton>
 					<IconButton
-						size='large'
 						edge='end'
 						color='secondary'
 						aria-label='nav-email'
 						href='mailto:kevinbarone18@gmail.com'
-						sx={{ margin: 0, paddingTop: '0' }}
+						sx={{ margin: 0 }}
 					>
 						<Email sx={{ fontSize: '1.25em' }} />
 					</IconButton>

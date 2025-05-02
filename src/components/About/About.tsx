@@ -7,30 +7,9 @@ import {
 	Button,
 } from '@mui/material';
 import { aboutData } from '../../data';
-import { styled } from '@mui/material/styles';
+import { StyledContainer, StyledTitle } from '../StyledComp';
 
 function About() {
-	const AboutContainer = styled('div')(({ theme }) => ({
-		display: 'flex',
-		flexDirection: 'column',
-		alignItems: 'center',
-		justifyContent: 'center',
-		maxWidth: '1280px',
-		[theme.breakpoints.up('sm')]: {
-			flexDirection: 'row',
-			flexWrap: 'wrap',
-		},
-	}));
-
-	const AboutTitle = styled('h4')(({ theme }) => ({
-		margin: '1rem 1rem 0 1rem',
-		textAlign: 'left',
-		[theme.breakpoints.up('sm')]: {
-			textAlign: 'center',
-			margin: '1.5rem auto',
-		},
-	}));
-
 	return (
 		<Box
 			sx={{
@@ -39,11 +18,11 @@ function About() {
 				alignItems: 'center',
 			}}
 		>
-			<AboutTitle>
+			<StyledTitle>
 				<Typography variant='h4' gutterBottom>
 					About
 				</Typography>
-			</AboutTitle>
+			</StyledTitle>
 			<Typography
 				variant='body1'
 				marginX={{ xs: '1rem', sm: 'auto' }}
@@ -54,7 +33,7 @@ function About() {
 				their technical acumen.
 			</Typography>
 
-			<AboutContainer>
+			<StyledContainer>
 				{aboutData.map((item, index) => (
 					<Card key={index} sx={{ margin: '1rem', maxWidth: '35rem' }}>
 						<CardContent>
@@ -92,7 +71,7 @@ function About() {
 						</CardActions>
 					</Card>
 				))}
-			</AboutContainer>
+			</StyledContainer>
 		</Box>
 	);
 }

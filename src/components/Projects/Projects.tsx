@@ -9,32 +9,9 @@ import {
 	CardActionArea,
 } from '@mui/material';
 import { projectsData } from '../../data';
-import { styled } from '@mui/material/styles';
+import { StyledContainer, StyledTitle } from '../StyledComp';
 
 function Projects() {
-	const ProjectContainer = styled('div')(({ theme }) => ({
-		display: 'flex',
-		flexDirection: 'column',
-		alignItems: 'center',
-		justifyContent: 'center',
-		maxWidth: '1280px',
-		margin: '1rem',
-		[theme.breakpoints.up('sm')]: {
-			flexDirection: 'row',
-			flexWrap: 'wrap',
-			gap: '2rem',
-		},
-	}));
-
-	const ProjectTitle = styled('h4')(({ theme }) => ({
-		margin: '1.5rem auto 0 2rem',
-		textAlign: 'left',
-		[theme.breakpoints.up('sm')]: {
-			textAlign: 'center',
-			margin: '1.5rem auto',
-		},
-	}));
-
 	return (
 		<Paper
 			sx={{
@@ -44,11 +21,11 @@ function Projects() {
 				height: '100vh',
 			}}
 		>
-			<ProjectTitle>
+			<StyledTitle>
 				<Typography variant='h4'>Personal Projects</Typography>
-			</ProjectTitle>
+			</StyledTitle>
 
-			<ProjectContainer>
+			<StyledContainer>
 				{projectsData.map((project, index) => (
 					<Card
 						key={index}
@@ -89,7 +66,7 @@ function Projects() {
 						</CardActionArea>
 					</Card>
 				))}
-			</ProjectContainer>
+			</StyledContainer>
 		</Paper>
 	);
 }

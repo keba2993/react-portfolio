@@ -2,6 +2,7 @@ import {
 	AppBar,
 	Toolbar,
 	IconButton,
+	Button,
 	Typography,
 	useScrollTrigger,
 } from '@mui/material';
@@ -31,19 +32,18 @@ function Navbar() {
 			sx={trigger ? {} : { boxShadow: '0' }}
 		>
 			<Toolbar>
-				<Link to='/'>
-					<IconButton
+				<Link to='/' style={{ textDecoration: 'none', flexGrow: 1 }}>
+					{/* <IconButton
 						size='large'
 						edge='start'
 						color='primary'
 						aria-label='nav-home'
 					>
 						<Home sx={{ fontSize: '1.05em' }} />
-					</IconButton>
+					</IconButton> */}
+					<Button sx={{ color: '#efefef' }}>Kevin Barone</Button>
 				</Link>
-				<Typography component='div' sx={{ flexGrow: 1 }}>
-					Kevin Barone
-				</Typography>
+
 				{width >= 600 ? (
 					<NavStack pages={pages} />
 				) : (

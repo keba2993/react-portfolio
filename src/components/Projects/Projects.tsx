@@ -10,15 +10,19 @@ import {
 } from '@mui/material';
 import { projectsData } from '../../data';
 import { StyledContainer, StyledTitle } from '../StyledComp';
+import { useEffect } from 'react';
 
 function Projects() {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	return (
 		<Paper
 			sx={{
 				display: 'flex',
 				flexDirection: 'column',
 				alignItems: 'center',
-				height: '100vh',
 			}}
 		>
 			<StyledTitle>
@@ -58,7 +62,9 @@ function Projects() {
 									{project.description}
 								</Typography>
 							</CardContent>
-							<CardActions sx={{ paddingLeft: '0' }}>
+							<CardActions
+								sx={{ justifyContent: 'flex-end', paddingRight: '0' }}
+							>
 								<Button size='small' href={project.link} target='_blank'>
 									View Project
 								</Button>

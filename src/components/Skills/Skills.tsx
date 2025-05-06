@@ -40,9 +40,9 @@ function Skills() {
 						whileHover={{ scale: 1.1, rotate: -5 }}
 						whileInView={{ opacity: 1, transition: { duration: 0.75 } }}
 						initial={{ opacity: 0 }}
+						key={skill}
 					>
 						<Card
-							key={skill}
 							sx={{
 								boxShadow: `0.25em 0.25em 0.25em ${theme.palette.primary.main}, -0.25em -0.25em 0.25em ${theme.palette.secondary.main}`,
 								borderRadius: '5%',

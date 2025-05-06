@@ -19,8 +19,8 @@ function App() {
 					<Route path='/projects' element={transition(<Projects />)} />
 					<Route path='/about' element={transition(<About />)} />
 				</Routes>
-				<Footer />
 			</AnimatePresence>
+			<Footer />
 		</>
 	);
 }

@@ -22,6 +22,10 @@ export function StyledTitle({ children }: { children: React.ReactNode }) {
 	const StyledHeader = styled('h4')(({ theme }) => ({
 		margin: '1.5rem auto 0 2rem',
 		textAlign: 'left',
+		fontWeight: '400',
+		fontSize: '2.125rem',
+		lineHeight: 1.235,
+		letterSpacing: '0.00735em',
 		[theme.breakpoints.up('sm')]: {
 			textAlign: 'center',
 			margin: '1.5rem auto',

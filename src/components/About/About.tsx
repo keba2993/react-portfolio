@@ -23,13 +23,11 @@ function About() {
 				display: 'flex',
 				flexDirection: 'column',
 				alignItems: 'center',
+				minHeight: '100dvh',
 			}}
 		>
-			<StyledTitle>
-				<Typography variant='h4' gutterBottom>
-					About
-				</Typography>
-			</StyledTitle>
+			<StyledTitle>About</StyledTitle>
+
 			<Typography
 				variant='body1'
 				marginX={{ xs: '2rem', sm: 'auto' }}

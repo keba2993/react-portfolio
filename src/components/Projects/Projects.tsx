@@ -23,11 +23,10 @@ function Projects() {
 				display: 'flex',
 				flexDirection: 'column',
 				alignItems: 'center',
+				minHeight: '100dvh',
 			}}
 		>
-			<StyledTitle>
-				<Typography variant='h4'>Personal Projects</Typography>
-			</StyledTitle>
+			<StyledTitle>Personal Projects</StyledTitle>
 
 			<StyledContainer>
 				{projectsData.map((project, index) => (

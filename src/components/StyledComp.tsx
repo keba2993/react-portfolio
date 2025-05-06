@@ -26,6 +26,7 @@ export function StyledTitle({ children }: { children: React.ReactNode }) {
 		fontSize: '2.125rem',
 		lineHeight: 1.235,
 		letterSpacing: '0.00735em',
+		marginBottom: '0.35em',
 		[theme.breakpoints.up('sm')]: {
 			textAlign: 'center',
 			margin: '1.5rem auto',

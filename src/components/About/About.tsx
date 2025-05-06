@@ -78,14 +78,12 @@ function About() {
 									{item.description}
 								</Typography>
 							</CardContent>
-							<CardActions
-								sx={{ justifyContent: 'flex-end', paddingRight: '0' }}
-							>
-								<Button size='small' href={item.link} target='_blank'>
-									More Info
-								</Button>
-							</CardActions>
 						</CardActionArea>
+						<CardActions sx={{ justifyContent: 'flex-end', paddingRight: '0' }}>
+							<Button size='small' href={item.link} target='_blank'>
+								More Info
+							</Button>
+						</CardActions>
 					</Card>
 				))}
 			</StyledContainer>

@@ -22,6 +22,9 @@ const theme = createTheme({
 			secondary: '#e2e2e2',
 		},
 	},
+	typography: {
+		fontFamily: 'Helvetica, Arial, sans-serif',
+	},
 	components: {
 		MuiCardContent: {
 			styleOverrides: {
@@ -37,6 +40,13 @@ const theme = createTheme({
 			styleOverrides: {
 				root: {
 					boxShadow: 'none',
+				},
+			},
+		},
+		MuiCardActionArea: {
+			styleOverrides: {
+				focusHighlight: {
+					backgroundColor: 'transparent',
 				},
 			},
 		},

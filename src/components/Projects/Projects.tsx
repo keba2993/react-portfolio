@@ -39,7 +39,11 @@ function Projects() {
 							borderBottom: '1px solid #ccc',
 						}}
 					>
-						<CardActionArea href={project.link} target='_blank'>
+						<CardActionArea
+							href={project.link}
+							target='_blank'
+							sx={{ ':hover': { backgroundColor: 'none' } }}
+						>
 							<CardContent>
 								<Box
 									display={'flex'}
@@ -61,14 +65,12 @@ function Projects() {
 									{project.description}
 								</Typography>
 							</CardContent>
-							<CardActions
-								sx={{ justifyContent: 'flex-end', paddingRight: '0' }}
-							>
-								<Button size='small' href={project.link} target='_blank'>
-									View Project
-								</Button>
-							</CardActions>
 						</CardActionArea>
+						<CardActions sx={{ justifyContent: 'flex-end', paddingRight: '0' }}>
+							<Button size='small' href={project.link} target='_blank'>
+								View Project
+							</Button>
+						</CardActions>
 					</Card>
 				))}
 			</StyledContainer>

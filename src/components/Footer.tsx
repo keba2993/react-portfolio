@@ -9,7 +9,7 @@ function Footer() {
 				color='text.secondary'
 				align='center'
 				paddingY='2rem'
-				variant='caption'
+				fontSize={'0.8rem'}
 			>
 				{currentYear} &copy; Kevin Barone. All rights reserved.
 			</Typography>

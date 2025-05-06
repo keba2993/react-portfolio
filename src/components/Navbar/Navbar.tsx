@@ -1,11 +1,5 @@
-import {
-	AppBar,
-	Toolbar,
-	IconButton,
-	Button,
-	useScrollTrigger,
-} from '@mui/material';
-import { Home, Code, Description } from '@mui/icons-material';
+import { AppBar, Toolbar, Button, useScrollTrigger } from '@mui/material';
+import { Code, Description } from '@mui/icons-material';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 import NavDrawer from './NavDrawer';
 import NavStack from './NavStack';

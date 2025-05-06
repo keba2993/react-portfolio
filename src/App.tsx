@@ -5,6 +5,7 @@ import About from './components/About/About';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'motion/react';
 import transition from './transition';
+import Footer from './components/Footer';
 
 function App() {
 	const location = useLocation();
@@ -18,6 +19,7 @@ function App() {
 					<Route path='/projects' element={transition(<Projects />)} />
 					<Route path='/about' element={transition(<About />)} />
 				</Routes>
+				<Footer />
 			</AnimatePresence>
 		</>
 	);

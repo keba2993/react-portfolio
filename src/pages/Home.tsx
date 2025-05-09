@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
-import Hero from './Hero';
-import Experience from './Experience/Experience';
-import Skills from './Skills/Skills';
+import Hero from '../components/Hero';
+import Experience from '../components/Experience/Experience';
+import Skills from '../components/Skills/Skills';
 import { useEffect } from 'react';
 
 function Home() {

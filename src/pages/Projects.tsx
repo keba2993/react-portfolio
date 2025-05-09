@@ -1,17 +1,17 @@
 import {
-	Typography,
 	Card,
 	CardContent,
-	Box,
+	Typography,
 	CardActions,
-	CardActionArea,
 	Button,
+	Box,
+	CardActionArea,
 } from '@mui/material';
-import { aboutData } from '../../data';
-import { StyledContainer, StyledTitle } from '../StyledComp';
+import { projectsData } from '../data';
+import { StyledContainer, StyledTitle } from '../components/StyledComp';
 import { useEffect } from 'react';
 
-function About() {
+function Projects() {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
@@ -25,20 +25,10 @@ function About() {
 				minHeight: '100dvh',
 			}}
 		>
-			<StyledTitle>About</StyledTitle>
-
-			<Typography
-				variant='body1'
-				marginX={{ xs: '2rem', sm: 'auto' }}
-				sx={{ maxWidth: '35rem' }}
-			>
-				In addition to my technical work and skills, I also enjoy many
-				extracurricular activities. There is much more to a person than just
-				their technical acumen.
-			</Typography>
+			<StyledTitle>Personal Projects</StyledTitle>
 
 			<StyledContainer>
-				{aboutData.map((item, index) => (
+				{projectsData.map((project, index) => (
 					<Card
 						key={index}
 						square
@@ -48,39 +38,36 @@ function About() {
 							borderBottom: '1px solid #ccc',
 						}}
 					>
-						<CardActionArea href={item.link} target='_blank'>
+						<CardActionArea
+							href={project.link}
+							target='_blank'
+							sx={{ ':hover': { backgroundColor: 'none' } }}
+						>
 							<CardContent>
 								<Box
 									display={'flex'}
 									alignItems={'center'}
 									justifyContent={'space-between'}
+									sx={{ marginBottom: '0.5rem' }}
 								>
-									<Typography variant='h5'>{item.title}</Typography>
+									<Typography variant='h5'>{project.title}</Typography>
 									<Typography
 										variant='caption'
 										display='block'
 										color='secondary.main'
 									>
-										{item.year}
+										{project.date}
 									</Typography>
 								</Box>
 
-								<Typography
-									variant='body1'
-									color='primary.main'
-									sx={{ marginBottom: '0.5rem' }}
-								>
-									{item.role}
-								</Typography>
-
 								<Typography variant='body2' color='text.secondary'>
-									{item.description}
+									{project.description}
 								</Typography>
 							</CardContent>
 						</CardActionArea>
 						<CardActions sx={{ justifyContent: 'flex-end', paddingRight: '0' }}>
-							<Button size='small' href={item.link} target='_blank'>
-								More Info
+							<Button size='small' href={project.link} target='_blank'>
+								View Project
 							</Button>
 						</CardActions>
 					</Card>
@@ -90,4 +77,4 @@ function About() {
 	);
 }
 
-export default About;
+export default Projects;

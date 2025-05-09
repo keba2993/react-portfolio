@@ -1,4 +1,4 @@
-import { Paper } from '@mui/material';
+import { Box } from '@mui/material';
 import Hero from './Hero';
 import Experience from './Experience/Experience';
 import Skills from './Skills/Skills';
@@ -10,7 +10,7 @@ function Home() {
 	}, []);
 
 	return (
-		<Paper
+		<Box
 			style={{
 				display: 'flex',
 				flexDirection: 'column',
@@ -19,7 +19,7 @@ function Home() {
 			<Hero />
 			<Experience />
 			<Skills />
-		</Paper>
+		</Box>
 	);
 }
 

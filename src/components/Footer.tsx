@@ -1,10 +1,9 @@
-import { Typography } from '@mui/material';
-import { Paper } from '@mui/material';
+import { Typography, Box } from '@mui/material';
 
 function Footer() {
 	const currentYear = new Date().getFullYear();
 	return (
-		<Paper square>
+		<Box>
 			<Typography
 				color='text.secondary'
 				align='center'
@@ -13,7 +12,7 @@ function Footer() {
 			>
 				{currentYear} &copy; Kevin Barone. All rights reserved.
 			</Typography>
-		</Paper>
+		</Box>
 	);
 }
 

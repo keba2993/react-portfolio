@@ -3,7 +3,6 @@ import {
 	Card,
 	CardContent,
 	Box,
-	Paper,
 	CardActions,
 	CardActionArea,
 	Button,
@@ -18,7 +17,7 @@ function About() {
 	}, []);
 
 	return (
-		<Paper
+		<Box
 			sx={{
 				display: 'flex',
 				flexDirection: 'column',
@@ -87,7 +86,7 @@ function About() {
 					</Card>
 				))}
 			</StyledContainer>
-		</Paper>
+		</Box>
 	);
 }
 

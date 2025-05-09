@@ -4,7 +4,6 @@ import {
 	Typography,
 	CardActions,
 	Button,
-	Paper,
 	Box,
 	CardActionArea,
 } from '@mui/material';
@@ -18,7 +17,7 @@ function Projects() {
 	}, []);
 
 	return (
-		<Paper
+		<Box
 			sx={{
 				display: 'flex',
 				flexDirection: 'column',
@@ -74,7 +73,7 @@ function Projects() {
 					</Card>
 				))}
 			</StyledContainer>
-		</Paper>
+		</Box>
 	);
 }
 

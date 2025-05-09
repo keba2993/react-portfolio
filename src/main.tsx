@@ -21,6 +21,9 @@ const theme = createTheme({
 			primary: '#efefef',
 			secondary: '#e2e2e2',
 		},
+		background: {
+			default: '#1a1a1a',
+		},
 	},
 	typography: {
 		fontFamily: 'Helvetica, Arial, sans-serif',
@@ -40,7 +43,11 @@ const theme = createTheme({
 			styleOverrides: {
 				root: {
 					boxShadow: 'none',
+					backgroundColor: 'transparent',
 				},
+			},
+			defaultProps: {
+				elevation: 0,
 			},
 		},
 		MuiCardActionArea: {

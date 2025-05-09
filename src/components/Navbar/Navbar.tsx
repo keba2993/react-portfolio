@@ -21,19 +21,11 @@ function Navbar() {
 	return (
 		<AppBar
 			position='sticky'
-			elevation={trigger ? 2 : 1}
-			sx={trigger ? {} : { boxShadow: '0' }}
+			elevation={trigger ? 2 : 0}
+			sx={trigger ? {} : { boxShadow: '0', backgroundColor: 'transparent' }}
 		>
 			<Toolbar>
 				<Link to='/' style={{ textDecoration: 'none', flexGrow: 1 }}>
-					{/* <IconButton
-						size='large'
-						edge='start'
-						color='primary'
-						aria-label='nav-home'
-					>
-						<Home sx={{ fontSize: '1.05em' }} />
-					</IconButton> */}
 					<Button sx={{ color: '#efefef' }}>Kevin Barone</Button>
 				</Link>
 

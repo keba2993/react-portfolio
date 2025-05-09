@@ -1,7 +1,7 @@
 import Navbar from './components/Navbar/Navbar';
-import Home from './components/Home';
-import Projects from './components/Projects/Projects';
-import About from './components/About/About';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+import About from './pages/About';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'motion/react';
 import transition from './transition';

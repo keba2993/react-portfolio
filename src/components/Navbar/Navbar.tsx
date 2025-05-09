@@ -22,7 +22,7 @@ function Navbar() {
 		<AppBar
 			position='sticky'
 			elevation={trigger ? 2 : 0}
-			sx={trigger ? {} : { boxShadow: '0', backgroundColor: 'transparent' }}
+			sx={trigger ? {} : { boxShadow: 'none', backgroundColor: 'transparent' }}
 		>
 			<Toolbar>
 				<Link to='/' style={{ textDecoration: 'none', flexGrow: 1 }}>

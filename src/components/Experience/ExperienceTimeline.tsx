@@ -55,7 +55,18 @@ function ExperienceTimeline() {
 								</TimelineOppositeContent>
 								<TimelineSeparator>
 									<TimelineConnector sx={{ height: '1rem' }} />
-									<TimelineDot sx={{ backgroundColor: 'transparent' }}>
+									<TimelineDot
+										sx={{
+											backgroundColor: 'transparent',
+											boxShadow: 'none',
+											padding: '0',
+											'&:hover': {
+												boxShadow: '0 0 16px #a7cf75',
+												cursor: 'pointer',
+												opacity: 0.8,
+											},
+										}}
+									>
 										<LogoStepIcon img={item.imagePath} num={index} />
 									</TimelineDot>
 									<TimelineConnector sx={{ height: '1rem' }} />

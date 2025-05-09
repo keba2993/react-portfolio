@@ -9,18 +9,15 @@ const theme = createTheme({
 		mode: 'dark',
 		primary: {
 			main: '#a7cf75',
-			dark: '#5e9827',
-			light: '#d9eac3',
 		},
 		secondary: {
-			main: '#a4c1df',
-			dark: '#5988ce',
-			light: '#c5d8ec',
+			main: '#6ea4e1',
 		},
 		text: {
 			primary: '#efefef',
 			secondary: '#e2e2e2',
 		},
+		tonalOffset: 0.5,
 		background: {
 			default: '#1a1a1a',
 		},
